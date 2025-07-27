@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Live News by State</title>
+  <style>
+    body { font-family: Arial,sans-serif; padding: 20px; }
+    .row { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; }
+    .state {
+      flex: 1;
+      min-width: 250px;
+      background: #f4f4f4;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px #0001;
+    }
+    .state-name {
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    .placeholder {
+      font-size: 0.9em; margin-bottom: 8px;
+      padding: 6px; background: #fff; border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .flash-green {
+      background-color: #c6f9c6 !important;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Live Rotating News Headlines - 50 States</h1>
+
+<div id="news-container">
+  
+    
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Alabama</div>
+          <div id="Alabama-slot-0" class="placeholder">Loading...</div>
+          <div id="Alabama-slot-1" class="placeholder">Loading...</div>
+          <div id="Alabama-slot-2" class="placeholder">Loading...</div>
+          <div id="Alabama-slot-3" class="placeholder">Loading...</div>
+          <div id="Alabama-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Alaska</div>
+          <div id="Alaska-slot-0" class="placeholder">Loading...</div>
+          <div id="Alaska-slot-1" class="placeholder">Loading...</div>
+          <div id="Alaska-slot-2" class="placeholder">Loading...</div>
+          <div id="Alaska-slot-3" class="placeholder">Loading...</div>
+          <div id="Alaska-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Arizona</div>
+          <div id="Arizona-slot-0" class="placeholder">Loading...</div>
+          <div id="Arizona-slot-1" class="placeholder">Loading...</div>
+          <div id="Arizona-slot-2" class="placeholder">Loading...</div>
+          <div id="Arizona-slot-3" class="placeholder">Loading...</div>
+          <div id="Arizona-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Arkansas</div>
+          <div id="Arkansas-slot-0" class="placeholder">Loading...</div>
+          <div id="Arkansas-slot-1" class="placeholder">Loading...</div>
+          <div id="Arkansas-slot-2" class="placeholder">Loading...</div>
+          <div id="Arkansas-slot-3" class="placeholder">Loading...</div>
+          <div id="Arkansas-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">California</div>
+          <div id="California-slot-0" class="placeholder">Loading...</div>
+          <div id="California-slot-1" class="placeholder">Loading...</div>
+          <div id="California-slot-2" class="placeholder">Loading...</div>
+          <div id="California-slot-3" class="placeholder">Loading...</div>
+          <div id="California-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Colorado</div>
+          <div id="Colorado-slot-0" class="placeholder">Loading...</div>
+          <div id="Colorado-slot-1" class="placeholder">Loading...</div>
+          <div id="Colorado-slot-2" class="placeholder">Loading...</div>
+          <div id="Colorado-slot-3" class="placeholder">Loading...</div>
+          <div id="Colorado-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Connecticut</div>
+          <div id="Connecticut-slot-0" class="placeholder">Loading...</div>
+          <div id="Connecticut-slot-1" class="placeholder">Loading...</div>
+          <div id="Connecticut-slot-2" class="placeholder">Loading...</div>
+          <div id="Connecticut-slot-3" class="placeholder">Loading...</div>
+          <div id="Connecticut-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Delaware</div>
+          <div id="Delaware-slot-0" class="placeholder">Loading...</div>
+          <div id="Delaware-slot-1" class="placeholder">Loading...</div>
+          <div id="Delaware-slot-2" class="placeholder">Loading...</div>
+          <div id="Delaware-slot-3" class="placeholder">Loading...</div>
+          <div id="Delaware-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Florida</div>
+          <div id="Florida-slot-0" class="placeholder">Loading...</div>
+          <div id="Florida-slot-1" class="placeholder">Loading...</div>
+          <div id="Florida-slot-2" class="placeholder">Loading...</div>
+          <div id="Florida-slot-3" class="placeholder">Loading...</div>
+          <div id="Florida-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Georgia</div>
+          <div id="Georgia-slot-0" class="placeholder">Loading...</div>
+          <div id="Georgia-slot-1" class="placeholder">Loading...</div>
+          <div id="Georgia-slot-2" class="placeholder">Loading...</div>
+          <div id="Georgia-slot-3" class="placeholder">Loading...</div>
+          <div id="Georgia-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Hawaii</div>
+          <div id="Hawaii-slot-0" class="placeholder">Loading...</div>
+          <div id="Hawaii-slot-1" class="placeholder">Loading...</div>
+          <div id="Hawaii-slot-2" class="placeholder">Loading...</div>
+          <div id="Hawaii-slot-3" class="placeholder">Loading...</div>
+          <div id="Hawaii-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Idaho</div>
+          <div id="Idaho-slot-0" class="placeholder">Loading...</div>
+          <div id="Idaho-slot-1" class="placeholder">Loading...</div>
+          <div id="Idaho-slot-2" class="placeholder">Loading...</div>
+          <div id="Idaho-slot-3" class="placeholder">Loading...</div>
+          <div id="Idaho-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Illinois</div>
+          <div id="Illinois-slot-0" class="placeholder">Loading...</div>
+          <div id="Illinois-slot-1" class="placeholder">Loading...</div>
+          <div id="Illinois-slot-2" class="placeholder">Loading...</div>
+          <div id="Illinois-slot-3" class="placeholder">Loading...</div>
+          <div id="Illinois-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Indiana</div>
+          <div id="Indiana-slot-0" class="placeholder">Loading...</div>
+          <div id="Indiana-slot-1" class="placeholder">Loading...</div>
+          <div id="Indiana-slot-2" class="placeholder">Loading...</div>
+          <div id="Indiana-slot-3" class="placeholder">Loading...</div>
+          <div id="Indiana-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Iowa</div>
+          <div id="Iowa-slot-0" class="placeholder">Loading...</div>
+          <div id="Iowa-slot-1" class="placeholder">Loading...</div>
+          <div id="Iowa-slot-2" class="placeholder">Loading...</div>
+          <div id="Iowa-slot-3" class="placeholder">Loading...</div>
+          <div id="Iowa-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Kansas</div>
+          <div id="Kansas-slot-0" class="placeholder">Loading...</div>
+          <div id="Kansas-slot-1" class="placeholder">Loading...</div>
+          <div id="Kansas-slot-2" class="placeholder">Loading...</div>
+          <div id="Kansas-slot-3" class="placeholder">Loading...</div>
+          <div id="Kansas-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Kentucky</div>
+          <div id="Kentucky-slot-0" class="placeholder">Loading...</div>
+          <div id="Kentucky-slot-1" class="placeholder">Loading...</div>
+          <div id="Kentucky-slot-2" class="placeholder">Loading...</div>
+          <div id="Kentucky-slot-3" class="placeholder">Loading...</div>
+          <div id="Kentucky-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Louisiana</div>
+          <div id="Louisiana-slot-0" class="placeholder">Loading...</div>
+          <div id="Louisiana-slot-1" class="placeholder">Loading...</div>
+          <div id="Louisiana-slot-2" class="placeholder">Loading...</div>
+          <div id="Louisiana-slot-3" class="placeholder">Loading...</div>
+          <div id="Louisiana-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Maine</div>
+          <div id="Maine-slot-0" class="placeholder">Loading...</div>
+          <div id="Maine-slot-1" class="placeholder">Loading...</div>
+          <div id="Maine-slot-2" class="placeholder">Loading...</div>
+          <div id="Maine-slot-3" class="placeholder">Loading...</div>
+          <div id="Maine-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Maryland</div>
+          <div id="Maryland-slot-0" class="placeholder">Loading...</div>
+          <div id="Maryland-slot-1" class="placeholder">Loading...</div>
+          <div id="Maryland-slot-2" class="placeholder">Loading...</div>
+          <div id="Maryland-slot-3" class="placeholder">Loading...</div>
+          <div id="Maryland-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Massachusetts</div>
+          <div id="Massachusetts-slot-0" class="placeholder">Loading...</div>
+          <div id="Massachusetts-slot-1" class="placeholder">Loading...</div>
+          <div id="Massachusetts-slot-2" class="placeholder">Loading...</div>
+          <div id="Massachusetts-slot-3" class="placeholder">Loading...</div>
+          <div id="Massachusetts-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Michigan</div>
+          <div id="Michigan-slot-0" class="placeholder">Loading...</div>
+          <div id="Michigan-slot-1" class="placeholder">Loading...</div>
+          <div id="Michigan-slot-2" class="placeholder">Loading...</div>
+          <div id="Michigan-slot-3" class="placeholder">Loading...</div>
+          <div id="Michigan-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Minnesota</div>
+          <div id="Minnesota-slot-0" class="placeholder">Loading...</div>
+          <div id="Minnesota-slot-1" class="placeholder">Loading...</div>
+          <div id="Minnesota-slot-2" class="placeholder">Loading...</div>
+          <div id="Minnesota-slot-3" class="placeholder">Loading...</div>
+          <div id="Minnesota-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Mississippi</div>
+          <div id="Mississippi-slot-0" class="placeholder">Loading...</div>
+          <div id="Mississippi-slot-1" class="placeholder">Loading...</div>
+          <div id="Mississippi-slot-2" class="placeholder">Loading...</div>
+          <div id="Mississippi-slot-3" class="placeholder">Loading...</div>
+          <div id="Mississippi-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Missouri</div>
+          <div id="Missouri-slot-0" class="placeholder">Loading...</div>
+          <div id="Missouri-slot-1" class="placeholder">Loading...</div>
+          <div id="Missouri-slot-2" class="placeholder">Loading...</div>
+          <div id="Missouri-slot-3" class="placeholder">Loading...</div>
+          <div id="Missouri-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Montana</div>
+          <div id="Montana-slot-0" class="placeholder">Loading...</div>
+          <div id="Montana-slot-1" class="placeholder">Loading...</div>
+          <div id="Montana-slot-2" class="placeholder">Loading...</div>
+          <div id="Montana-slot-3" class="placeholder">Loading...</div>
+          <div id="Montana-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Nebraska</div>
+          <div id="Nebraska-slot-0" class="placeholder">Loading...</div>
+          <div id="Nebraska-slot-1" class="placeholder">Loading...</div>
+          <div id="Nebraska-slot-2" class="placeholder">Loading...</div>
+          <div id="Nebraska-slot-3" class="placeholder">Loading...</div>
+          <div id="Nebraska-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Nevada</div>
+          <div id="Nevada-slot-0" class="placeholder">Loading...</div>
+          <div id="Nevada-slot-1" class="placeholder">Loading...</div>
+          <div id="Nevada-slot-2" class="placeholder">Loading...</div>
+          <div id="Nevada-slot-3" class="placeholder">Loading...</div>
+          <div id="Nevada-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">New Hampshire</div>
+          <div id="NewHampshire-slot-0" class="placeholder">Loading...</div>
+          <div id="NewHampshire-slot-1" class="placeholder">Loading...</div>
+          <div id="NewHampshire-slot-2" class="placeholder">Loading...</div>
+          <div id="NewHampshire-slot-3" class="placeholder">Loading...</div>
+          <div id="NewHampshire-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">New Jersey</div>
+          <div id="NewJersey-slot-0" class="placeholder">Loading...</div>
+          <div id="NewJersey-slot-1" class="placeholder">Loading...</div>
+          <div id="NewJersey-slot-2" class="placeholder">Loading...</div>
+          <div id="NewJersey-slot-3" class="placeholder">Loading...</div>
+          <div id="NewJersey-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">New Mexico</div>
+          <div id="NewMexico-slot-0" class="placeholder">Loading...</div>
+          <div id="NewMexico-slot-1" class="placeholder">Loading...</div>
+          <div id="NewMexico-slot-2" class="placeholder">Loading...</div>
+          <div id="NewMexico-slot-3" class="placeholder">Loading...</div>
+          <div id="NewMexico-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">New York</div>
+          <div id="NewYork-slot-0" class="placeholder">Loading...</div>
+          <div id="NewYork-slot-1" class="placeholder">Loading...</div>
+          <div id="NewYork-slot-2" class="placeholder">Loading...</div>
+          <div id="NewYork-slot-3" class="placeholder">Loading...</div>
+          <div id="NewYork-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">North Carolina</div>
+          <div id="NorthCarolina-slot-0" class="placeholder">Loading...</div>
+          <div id="NorthCarolina-slot-1" class="placeholder">Loading...</div>
+          <div id="NorthCarolina-slot-2" class="placeholder">Loading...</div>
+          <div id="NorthCarolina-slot-3" class="placeholder">Loading...</div>
+          <div id="NorthCarolina-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">North Dakota</div>
+          <div id="NorthDakota-slot-0" class="placeholder">Loading...</div>
+          <div id="NorthDakota-slot-1" class="placeholder">Loading...</div>
+          <div id="NorthDakota-slot-2" class="placeholder">Loading...</div>
+          <div id="NorthDakota-slot-3" class="placeholder">Loading...</div>
+          <div id="NorthDakota-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Ohio</div>
+          <div id="Ohio-slot-0" class="placeholder">Loading...</div>
+          <div id="Ohio-slot-1" class="placeholder">Loading...</div>
+          <div id="Ohio-slot-2" class="placeholder">Loading...</div>
+          <div id="Ohio-slot-3" class="placeholder">Loading...</div>
+          <div id="Ohio-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Oklahoma</div>
+          <div id="Oklahoma-slot-0" class="placeholder">Loading...</div>
+          <div id="Oklahoma-slot-1" class="placeholder">Loading...</div>
+          <div id="Oklahoma-slot-2" class="placeholder">Loading...</div>
+          <div id="Oklahoma-slot-3" class="placeholder">Loading...</div>
+          <div id="Oklahoma-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Oregon</div>
+          <div id="Oregon-slot-0" class="placeholder">Loading...</div>
+          <div id="Oregon-slot-1" class="placeholder">Loading...</div>
+          <div id="Oregon-slot-2" class="placeholder">Loading...</div>
+          <div id="Oregon-slot-3" class="placeholder">Loading...</div>
+          <div id="Oregon-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Pennsylvania</div>
+          <div id="Pennsylvania-slot-0" class="placeholder">Loading...</div>
+          <div id="Pennsylvania-slot-1" class="placeholder">Loading...</div>
+          <div id="Pennsylvania-slot-2" class="placeholder">Loading...</div>
+          <div id="Pennsylvania-slot-3" class="placeholder">Loading...</div>
+          <div id="Pennsylvania-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Rhode Island</div>
+          <div id="RhodeIsland-slot-0" class="placeholder">Loading...</div>
+          <div id="RhodeIsland-slot-1" class="placeholder">Loading...</div>
+          <div id="RhodeIsland-slot-2" class="placeholder">Loading...</div>
+          <div id="RhodeIsland-slot-3" class="placeholder">Loading...</div>
+          <div id="RhodeIsland-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">South Carolina</div>
+          <div id="SouthCarolina-slot-0" class="placeholder">Loading...</div>
+          <div id="SouthCarolina-slot-1" class="placeholder">Loading...</div>
+          <div id="SouthCarolina-slot-2" class="placeholder">Loading...</div>
+          <div id="SouthCarolina-slot-3" class="placeholder">Loading...</div>
+          <div id="SouthCarolina-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">South Dakota</div>
+          <div id="SouthDakota-slot-0" class="placeholder">Loading...</div>
+          <div id="SouthDakota-slot-1" class="placeholder">Loading...</div>
+          <div id="SouthDakota-slot-2" class="placeholder">Loading...</div>
+          <div id="SouthDakota-slot-3" class="placeholder">Loading...</div>
+          <div id="SouthDakota-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Tennessee</div>
+          <div id="Tennessee-slot-0" class="placeholder">Loading...</div>
+          <div id="Tennessee-slot-1" class="placeholder">Loading...</div>
+          <div id="Tennessee-slot-2" class="placeholder">Loading...</div>
+          <div id="Tennessee-slot-3" class="placeholder">Loading...</div>
+          <div id="Tennessee-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Texas</div>
+          <div id="Texas-slot-0" class="placeholder">Loading...</div>
+          <div id="Texas-slot-1" class="placeholder">Loading...</div>
+          <div id="Texas-slot-2" class="placeholder">Loading...</div>
+          <div id="Texas-slot-3" class="placeholder">Loading...</div>
+          <div id="Texas-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Utah</div>
+          <div id="Utah-slot-0" class="placeholder">Loading...</div>
+          <div id="Utah-slot-1" class="placeholder">Loading...</div>
+          <div id="Utah-slot-2" class="placeholder">Loading...</div>
+          <div id="Utah-slot-3" class="placeholder">Loading...</div>
+          <div id="Utah-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Vermont</div>
+          <div id="Vermont-slot-0" class="placeholder">Loading...</div>
+          <div id="Vermont-slot-1" class="placeholder">Loading...</div>
+          <div id="Vermont-slot-2" class="placeholder">Loading...</div>
+          <div id="Vermont-slot-3" class="placeholder">Loading...</div>
+          <div id="Vermont-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="state">
+          <div class="state-name">Virginia</div>
+          <div id="Virginia-slot-0" class="placeholder">Loading...</div>
+          <div id="Virginia-slot-1" class="placeholder">Loading...</div>
+          <div id="Virginia-slot-2" class="placeholder">Loading...</div>
+          <div id="Virginia-slot-3" class="placeholder">Loading...</div>
+          <div id="Virginia-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Washington</div>
+          <div id="Washington-slot-0" class="placeholder">Loading...</div>
+          <div id="Washington-slot-1" class="placeholder">Loading...</div>
+          <div id="Washington-slot-2" class="placeholder">Loading...</div>
+          <div id="Washington-slot-3" class="placeholder">Loading...</div>
+          <div id="Washington-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">West Virginia</div>
+          <div id="WestVirginia-slot-0" class="placeholder">Loading...</div>
+          <div id="WestVirginia-slot-1" class="placeholder">Loading...</div>
+          <div id="WestVirginia-slot-2" class="placeholder">Loading...</div>
+          <div id="WestVirginia-slot-3" class="placeholder">Loading...</div>
+          <div id="WestVirginia-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Wisconsin</div>
+          <div id="Wisconsin-slot-0" class="placeholder">Loading...</div>
+          <div id="Wisconsin-slot-1" class="placeholder">Loading...</div>
+          <div id="Wisconsin-slot-2" class="placeholder">Loading...</div>
+          <div id="Wisconsin-slot-3" class="placeholder">Loading...</div>
+          <div id="Wisconsin-slot-4" class="placeholder">Loading...</div>
+        </div>
+        <div class="state">
+          <div class="state-name">Wyoming</div>
+          <div id="Wyoming-slot-0" class="placeholder">Loading...</div>
+          <div id="Wyoming-slot-1" class="placeholder">Loading...</div>
+          <div id="Wyoming-slot-2" class="placeholder">Loading...</div>
+          <div id="Wyoming-slot-3" class="placeholder">Loading...</div>
+          <div id="Wyoming-slot-4" class="placeholder">Loading...</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<script>
+    const apiKey = 'rm9pbggtpbdaqdscdbfoig5ro0busxffatbr5vlq'; // Replace with your real key
+  
+    const stateFeeds = {
+      Alabama: [
+        "https://alabamareflector.com/feed/",
+        "https://www.whnt.com/feed/",
+        "https://birminghamwatch.org/feed/",
+        "https://yellowhammernews.com/feed/",
+        "https://www.alabamanews.net/feed/"
+      ],
+      Alaska: [
+        "https://seniorvoicealaska.com/rss",
+        "https://nomenugget.net/rss.xml",
+        "https://www.juneauempire.com/feed/",
+        "https://www.ktoo.org/feed/",
+        "https://alaskabeacon.com/feed/"
+      ],
+      Arizona: [
+        "https://www.azmirror.com/feed/",
+        "https://www.tucsonweekly.com/tucson/Rss.xml/feed",
+        "https://azdailysun.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc",
+        "https://www.tucsonweekly.com/tucson/Rss.xml/feed",
+        "https://www.inmaricopa.com/feed/"
+      ],
+      Arkansas: [
+    "https://arkansasadvocate.com/feed/",
+    "https://arktimes.com/feed",
+    "https://www.arkansasonline.com/rss/headlines/news/",
+    "https://www.arkansasbusiness.com/feed/",
+    "https://talkbusiness.net/feed/"
+  ],
+  California: [
+    "https://calmatters.org/feed/",
+    "https://www.latimes.com/rss2.0.xml",
+    "https://www.nbclosangeles.com/?rss=y",
+    "https://www.mercurynews.com/feed/",
+    "https://abc7news.com/rss"
+  ],
+  Colorado: [
+    "https://coloradosun.com/feed/",
+    "https://www.denver7.com/news/front-range/fort-collins.rss",
+    "https://www.denverpost.com/feed/",
+    "https://kdvr.com/feed/",
+    "https://www.coloradopolitics.com/search/?f=rss&t=article&c=news"
+  ],
+  Connecticut: [
+    "https://www.ctpost.com/rss/feed/News-1331.php",
+    "https://ctnewsjunkie.com/feed/",
+    "https://ctmirror.org/feed/",
+    "https://www.stamfordadvocate.com/rss/feed/News-1443.php",
+    "https://www.wtnh.com/feed/"
+  ],
+  Delaware: [
+    "https://www.witn22.org/feed/",
+    "https://delawarelive.com/feed/",
+    "https://delawarefreenews.org/feed/",
+    "https://witn22.org/feed",
+    "https://delawarelive.com/feed"
+  ],
+  Florida: [
+    "https://flvoicenews.com/feed/",
+    "https://www.floridabulldog.org/feed/",
+    "https://www.local10.com/arc/outboundfeeds/rss/category/news/?outputType=xml&size=10",
+    "https://floridadaily.com/feed/",
+    "https://floridapolitics.com/feed/"
+  ],
+  Georgia: [
+    "https://georgiarecorder.com/feed/",
+    "https://www.gainesvilletimes.com/rss/",
+    "https://www.covnews.com/rss/",
+    "https://www.wrganews.com/feed/",
+    "https://georgiastatesignal.com/feed/"
+  ],
+  Hawaii: [
+    "https://www.khon2.com/feed/",
+    "https://feeds.feedburner.com/AllHawaiiNews",
+    "https://www.civilbeat.org/feed/",
+    "https://www.staradvertiser.com/feed/",
+    "https://bigislandnow.com/feed/"
+  ],
+  Idaho: [
+    "https://www.idahofallsidaho.gov/RSSFeed.aspx?ModID=1&CID=All-newsflash.xml",
+    "https://www.eastidahonews.com/feed/",
+    "https://www.idahocapitalsun.com/feed/",
+    "https://www.kivitv.com/news/local-news.rss",
+    "https://www.boisestatepublicradio.org/news.rss"
+  ],
+  Illinois: [
+    "https://www.illinoistimes.com/springfield/Rss.xml",
+    "https://wgntv.com/feed/",
+    "https://capitolfax.com/feed/",
+    "https://abc7chicago.com/rss",
+    "https://chicago.suntimes.com/rss/index.xml"
+  ],
+  Indiana: [
+    "https://indianacapitalchronicle.com/feed/",
+    "https://fox59.com/feed/",
+    "https://indypolitics.org/feed/",
+    "https://www.wishtv.com/feed/",
+    "https://www.nwitimes.com/search/?f=rss&t=article&c=news/local&l=50&s=start_time&sd=desc"
+  ],
+  Iowa: [
+    "https://northiowatoday.com/feed/",
+    "https://iowacapitaldispatch.com/feed/",
+    "https://whotv.com/feed/",
+    "https://iowastatedaily.com/feed/",
+    "https://www.radioiowa.com/feed/"
+  ],
+  Kansas: [
+    "https://kansasreflector.com/feed/",
+    "https://www.ksnt.com/feed",
+    "https://themercury.com/search/?f=rss&t=article&c=news",
+    "https://www.ksn.com/feed/",
+    "https://westernkansasnews.com/feed"
+  ],
+  Kentucky: [
+    "https://lexingtonky.news/feed",
+    "https://www.wtvq.com/feed",
+    "https://www.wowktv.com/news/kentucky/feed",
+    "https://wfpl.org/feed/",
+    "https://kentuckylantern.com/feed/"
+  ],
+  Louisiana: [
+    "https://www.myarklamiss.com/louisiana-news/feed/",
+    "https://wgno.com/feed/",
+    "https://feeds.feedburner.com/wbrz/news",
+    "https://thelensnola.org/feed/",
+    "https://www.katc.com/index.rss"
+],
+  Maine: [
+    "https://www.centralmaine.com/feed/",
+    "https://lcnme.com/feed/",
+    "https://www.pressherald.com/news/feed/",
+    "https://www.bangordailynews.com/feed/",
+    "https://www.centralmaine.com/feed/"
+  ],
+  Maryland: [
+    "https://thedailyrecord.com/feed/",
+    "https://wtop.com/local/feed/",
+    "https://www.marylandmatters.org/feed/",
+    "https://smnewsnet.com/feed/",
+    "https://www.wmar2news.com/news/local-news.rss"
+  ],
+  Massachusetts: [
+    "https://www.boston.com/feed/",
+    "https://whdh.com/feed/",
+    "https://www.lowellsun.com/feed/",
+    "https://southernmarylandchronicle.com/feed/",
+    "https://framinghamsource.com/index.php/feed/"
+  ],
+  Michigan: [
+    "https://www.metrotimes.com/detroit/Rss.xml",
+    "https://www.bridgemi.com/rss.xml",
+    "https://www.theoaklandpress.com/feed/",
+    "https://michiganadvance.com/feed/",
+    "https://www.wlns.com/news/michigan/feed/"
+  ],
+  Minnesota: [
+    "https://minnesotareformer.com/feed/",
+    "https://www.startribune.com/rss/",
+    "https://bringmethenews.com/.rss/full/",
+    "https://kstp.com/rss",
+    "https://www.startribune.com/local/index.rss2"
+  ],
+  Mississippi: [
+    "https://mississippitoday.org/feed/",
+    "https://mississippitoday.org/feed/",
+    "https://www.biloxinewsevents.com/feed/",
+    "https://www.wjtv.com/feed/",
+    "https://www.magnoliastatelive.com/feed/"
+  ],
+  Missouri: [
+    "https://www.stltoday.com/search/?f=rss&c=news",
+    "https://www.missourinet.com/feed/",
+    "https://missouriindependent.com/feed/",
+    "https://fox2now.com/feed/",
+    "https://www.ozarksfirst.com/feed/"
+  ],
+  Montana: [
+    "https://dailymontanan.com/feed/",
+    "https://www.ktvq.com/news/local-news.rss",
+    "https://www.kxlh.com/news/local-news.rss",
+    "https://helenair.com/search/?f=rss",
+    "https://www.kpax.com/news/local-news.rss"
+  ],
+  Nebraska: [
+    "https://nebraskaexaminer.com/feed/",
+    "https://journalstar.com/search/?f=rss&t=article&c=news*&l=25&s=start_time&sd=desc",
+    "https://starherald.com/search/?f=rss&t=article&c=news",
+    "https://columbustelegram.com/search/?f=rss&t=article&c=news",
+    "https://norfolkdailynews.com/search/?f=rss&t=article&c=news"
+  ],
+  Nevada: [
+    "https://thenevadaindependent.com/feed/",
+    "https://www.8newsnow.com/feed/",
+    "https://www.reviewjournal.com/feed/",
+    "https://www.ktnv.com/news/local-news.rss",
+    "https://mynews4.com/news/local.rss"
+  ],
+  NewHampshire: [
+    "https://feeds.bignewsnetwork.com/category/7fc3ecac1bc98a90",
+    "https://www.unionleader.com/search/?f=rss&c=news",
+    "https://indepthnh.org/feed/",
+    "https://whdh.com/news/local/new-hampshire/feed/",
+    "https://newhampshirebulletin.com/feed/"
+  ],
+  NewJersey: [
+    "https://newjerseyglobe.com/feed/",
+    "https://www.njspotlightnews.org/feed/",
+    "https://www.njtvonline.org/feed/",
+    "https://www.nj1015.com/feed/",
+    "https://njmonthly.com/feed/"
+  ],
+  NewMexico: [
+    "https://nmpoliticalreport.com/feed/",
+    "https://www.santafenewmexican.com/search/?f=rss",
+    "https://www.krqe.com/feed/",
+    "https://www.kob.com/rss",
+    "https://krqe.com/feed/"
+  ],
+  NewYork: [
+    "https://nypost.com/feed/",
+    "https://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "https://abc7ny.com/feed/",
+    "https://gothamist.com/feed/",
+    "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  ],
+  NorthCarolina: [
+    "https://www.wral.com/news/rss/48/",
+    "https://www.cbs17.com/news/north-carolina-news/feed/",
+    "https://abc11.com/feed/",
+    "https://www.wnct.com/news/north-carolina/feed/",
+    "https://abc11.com/rss"
+  ],
+  NorthDakota: [
+    "https://www.kxnet.com/feed/",
+    "https://www.nytimes.com/svc/collections/v1/publish/https://www.nytimes.com/topic/destination/north-dakota/rss.xml",
+    "https://www.jamestownsun.com/index.rss",
+    "https://www.inforum.com/index.rss",
+    "https://www.newsdakota.com/feed/"
+  ],
+  Ohio: [
+    "https://www.delawareohionews.com/feed/",
+    "https://ohiocapitaljournal.com/feed/",
+    "https://theohiostar.com/feed/",
+    "https://www.newsdakota.com/feed/",
+    "https://www.cleveland.com/arc/outboundfeeds/rss/?outputType=xml"
+  ],
+  Oklahoma: [
+    "https://oklahomawatch.org/feed/",
+    "https://kfor.com/feed/",
+    "https://www.tulsaworld.com/search/?f=rss&c=news",
+    "https://freepressokc.com/feed/",
+    "https://osagenews.org/feed/"
+  ],
+  Oregon: [
+    "https://www.beachconnection.net/news/feed.xml",
+    "https://pamplinmedia.com/feed/rss",
+    "https://www.portlandmercury.com/portland/Rss.xml?section=22213/feed",
+    "https://www.koin.com/feed/",
+    "https://www.pdxmonthly.com/feed"
+  ],
+  Pennsylvania: [
+    "https://phl17.com/feed/",
+    "https://www.montgomerycountypa.gov/RSSFeed.aspx?ModID=76&CID=All-0",
+    "https://www.nbcphiladelphia.com/?rss=y",
+    "https://www.mainlinemedianews.com/feed/",
+    "https://www.dailylocal.com/feed/"
+  ],
+  RhodeIsland: [
+    "https://warwickpost.com/feed/",
+    "https://www.wpri.com/feed/",
+    "https://www.abc6.com/feed/",
+    "https://whatsupnewp.com/feed/",
+    "https://rinewstoday.com/feed/"
+  ],
+  SouthCarolina: [
+    "https://www.postandcourier.com/search/?f=rss&t=article&c=news",
+    "https://charlestoncitypaper.com/feed/",
+    "https://www.fitsnews.com/feed/",
+    "https://charlestoncitypaper.com/feed/",
+    "https://counton2.com/feed/"
+  ],
+  SouthDakota: [
+    "https://www.keloland.com/feed/",
+    "https://www.keloland.com/feed/",
+    "https://www.mitchellrepublic.com/index.rss",
+    "https://www.kotaradio.com/feed/",
+    "https://drgnews.com/feed/"
+  ],
+  Tennessee: [
+    "https://www.wkrn.com/feed/",
+    "https://tennesseelookout.com/feed/",
+    "https://wpln.org/feed/",
+    "https://www.wkrn.com/news/tennessee-news/feed/",
+    "https://www.wate.com/feed/"
+  ],
+  Texas: [
+    "https://www.texasobserver.org/feed/",
+    "https://www.mysanantonio.com/default/feed/local-news-176.php",
+    "https://www.kxan.com/feed/",
+    "https://www.kxan.com/feed/",
+    "https://texassignal.com/rss/"
+  ],
+  Utah: [
+    "https://www.parkrecord.com/feed/",
+    "https://suindependent.com/feed/",
+    "https://lehifreepress.com/feed/",
+    "https://www.sunews.net/blog-feed.xml",
+    "https://www.fox13now.com/news/local-news.rss"
+  ],
+  Vermont: [
+    "https://vtdigger.org/feed/",
+    "https://www.boston.com/tag/vermont/feed/",
+    "https://whdh.com/regional/vermont/feed/",
+    "https://www.news10.com/news/vt-news/feed/",
+    "https://www.sevendaysvt.com/vermont/Rss.xml"
+  ],
+  Virginia: [
+    "https://www.wric.com/app-feed",
+    "https://www.richmond.com/search/?f=rss&t=article&c=news",
+    "https://valawyersweekly.com/feed/",
+    "https://cardinalnews.org/feed/",
+    "https://www.styleweekly.com/feed/"
+  ],
+  Washington: [
+    "https://mynorthwest.com/feed",
+    "https://www.columbian.com/feed/",
+    "https://www.westsideseattle.com/rss.xml",
+    "https://www.peninsuladailynews.com/feed/",
+    "https://mynorthwest.com/feed/"
+  ],
+  WestVirginia: [
+    "https://www.dominionpost.com/feed/",
+    "https://www.morganmessenger.com/feed/",
+    "https://apps.wv.gov/portal/rss/limit/50",
+    "https://www.wfxrtv.com/news/regional-news/west-virginia-news/feed/",
+    "https://wvexplorer.com/feed/"
+  ],
+  Wisconsin: [
+    "https://madison.com/search/?f=rss&c=news",
+    "https://isthmus.com/api/rss/content.rss",
+    "https://www.wispolitics.com/feed/",
+    "https://wisconsinexaminer.com/feed/",
+    "https://fox47.com/news/local.rss"
+  ],
+  Wyoming: [
+    "https://trib.com/search/?f=rss&t=article&c=news/state-and-regional&l=50&s=start_time&sd=desc",
+    "https://wyofile.com/feed/",
+    "https://www.wyofile.com/feed/",
+    "https://oilcity.news/feed/",
+    "https://k2radio.com/feed/"
+  ]
+      // Add more state feeds
+    };
+  
+    const articlesByFeed = {};
+    const currentIndex = {};
+    const lastTitle = {};
+  
+    async function fetchFeed(url, feedKey) {
+      const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(url)}&api_key=${apiKey}`;
+      try {
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+        if (data.status === 'ok') {
+          articlesByFeed[feedKey] = data.items;
+          currentIndex[feedKey] = 0;
+        } else {
+          articlesByFeed[feedKey] = [];
+          console.warn(`Feed error [${feedKey}]`, data.message);
+        }
+      } catch (err) {
+        console.error('Feed fetch failed:', err);
+        articlesByFeed[feedKey] = [];
+      }
+    }
+  
+    async function refreshAllFeeds() {
+      const promises = [];
+      Object.keys(stateFeeds).forEach(state => {
+        stateFeeds[state].forEach((url, i) => {
+          const feedKey = `${state}-${i}`;
+          promises.push(fetchFeed(url, feedKey));
+        });
+      });
+      await Promise.all(promises);
+      renderAll();
+    }
+  
+    function renderAll() {
+      Object.keys(stateFeeds).forEach(state => {
+        stateFeeds[state].forEach((url, i) => {
+          const feedKey = `${state}-${i}`;
+          const slot = document.getElementById(`${state}-slot-${i}`);
+          if (!slot) return;
+  
+          const items = articlesByFeed[feedKey] || [];
+          if (items.length === 0) {
+            slot.textContent = "(No data)";
+            return;
+          }
+  
+          const idx = currentIndex[feedKey] || 0;
+          const article = items[idx];
+  
+          if (lastTitle[feedKey] !== article.title) {
+            slot.classList.add("flash-green");
+            setTimeout(() => slot.classList.remove("flash-green"), 300);
+          }
+  
+          slot.innerHTML = `<a href="${article.link}" target="_blank">${article.title}</a>`;
+          lastTitle[feedKey] = article.title;
+        });
+      });
+    }
+  
+    function rotateArticles() {
+      Object.keys(stateFeeds).forEach(state => {
+        stateFeeds[state].forEach((url, i) => {
+          const feedKey = `${state}-${i}`;
+          const items = articlesByFeed[feedKey];
+          if (items && items.length > 0) {
+            currentIndex[feedKey] = (currentIndex[feedKey] + 1) % items.length;
+          }
+        });
+      });
+      renderAll();
+    }
+  
+    // ✔ Start on page load
+    refreshAllFeeds();
+    setInterval(refreshAllFeeds, 15 * 60 * 1000);
+    setInterval(rotateArticles, 5000);
+  </script>
+  
+</body>
+</html>
