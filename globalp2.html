@@ -38,7 +38,61 @@
       .flash-green {
         background-color: #c6f9c6 !important;
       }
+      #search-bar {
+        width: 100%;
+        padding: 12px 16px;
+        margin-bottom: 12px;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        font-size: 16px;
+        transition: border-color 0.3s ease;
+      }
 
+      #search-bar:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      #search-container {
+        position: relative;
+        width: 100%;
+      }
+
+      #search-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      #search-button:hover {
+        background-color: #0056b3;
+      }
+
+      #clear-button {
+        position: absolute;
+        right: 15px;
+        top: 12px;
+        background: transparent;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        color: #888;
+      }
+
+      #clear-button:hover {
+        color: #333;
+      }
+
+      #loading-spinner {
+        display: none;
+        margin-left: 10px;
+        vertical-align: middle;
+      }
       .container {
         display: flex;
       }
@@ -64,26 +118,18 @@
         </div>
         <div id="news-box">
           <h2>Selected State News</h2>
-          <input
-            type="text"
-            id="search-bar"
-            placeholder="Search keywords..."
-            style="width: 100%; padding: 10px; margin-bottom: 20px"
-          />
-          <button type="submit" id="search-button" onclick="testing()">
-            <script>
-              function testing() {
-                const keyword = document
-                  .getElementById("search-bar")
-                  .value.trim();
-                if (keyword) {
-                  searchNews(keyword);
-                }
-                console.log(keyword);
-              }
-            </script>
-            Search
-          </button>
+          <div id="search-container">
+            <input
+              type="text"
+              id="search-bar"
+              placeholder="Search keywords..."
+              onkeydown="handleKeyPress(event)"
+            />
+            <button id="clear-button" onclick="clearSearch()">✖</button>
+          </div>
+          <button id="search-button" onclick="Trigger()">Search</button>
+          <span id="loading-spinner">⏳</span>
+
           <ul id="news-list"></ul>
         </div>
       </div>
@@ -1270,6 +1316,34 @@
         Wisconsin: "WI",
         Wyoming: "WY",
       };
+      function Trigger() {
+        const input = document.getElementById("search-bar").value.trim();
+        if (!input) return;
+
+        const spinner = document.getElementById("loading-spinner");
+        spinner.style.display = "inline";
+
+        // Simulate async task
+        setTimeout(() => {
+          const keyword = document.getElementById("search-bar").value.trim();
+          if (keyword) {
+            searchNews(keyword);
+          } // Replace this with your real logic
+          spinner.style.display = "none";
+        }, 1000);
+      }
+
+      function handleKeyPress(event) {
+        if (event.key === "Enter") {
+          Trigger();
+        }
+      }
+
+      function clearSearch() {
+        document.getElementById("search-bar").value = "";
+        document.getElementById("search-bar").focus();
+        stopFlashing();
+      }
 
       const areas_default = {
         AL: {
@@ -1773,31 +1847,35 @@
           },
         },
       };
+      document
+        .getElementById("search-bar")
+        .addEventListener("input", function (e) {
+          if (e.target.value.trim() === "") {
+            stopFlashing();
+          }
+        });
       const getAreaIdFromName = (stateAbbr) => {
         return stateToId[stateAbbr.replace(/[^a-zA-Z\s]/g, "")];
       };
-      function flashStates(stateList) {
-        // Map state names/abbreviations to area IDs
-        const areaIds = stateList.map((stateAbbr) =>
-          getAreaIdFromName(stateAbbr)
-        );
+      let flashIntervalId = null;
 
+      function flashStates(stateList) {
+        stopFlashing(); // Stop any previous flashing before starting new
+
+        const areaIds = stateList.map((state) => getAreaIdFromName(state));
         let isHighlighted = false;
 
-        setInterval(() => {
+        flashIntervalId = setInterval(() => {
           const fillColor = isHighlighted ? "#6baed6" : "#ff0000";
 
-          // Build the areas object with all areaIds toggling together
           const areasUpdate = {};
           areaIds.forEach((areaId) => {
             areasUpdate[areaId] = { attrs: { fill: fillColor } };
           });
 
-          $(`.mapcontainer`).trigger("update", [
+          $(".mapcontainer").trigger("update", [
             {
-              mapOptions: {
-                areas: areasUpdate,
-              },
+              mapOptions: { areas: areasUpdate },
             },
           ]);
 
@@ -1805,6 +1883,20 @@
         }, 1500);
       }
 
+      function stopFlashing() {
+        if (flashIntervalId) {
+          console.log("stop flashing");
+          clearInterval(flashIntervalId);
+          flashIntervalId = null;
+          $(".mapcontainer").trigger("update", [
+            {
+              mapOptions: {
+                areas: areas_default,
+              },
+            },
+          ]);
+        }
+      }
       $(".mapcontainer").mapael({
         map: {
           name: "usa_states",
