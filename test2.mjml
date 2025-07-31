@@ -1,0 +1,848 @@
+<mjml lang="en">
+  <mj-head>
+    <mj-title></mj-title>
+    <mj-preview></mj-preview>
+    <mj-style>
+      u + .emailify .g-screen { background: #000; mix-blend-mode:screen;
+      display: inline-block; padding: 0; margin: 0; } u + .emailify .g-diff {
+      background: #000; mix-blend-mode:difference; display: inline-block;
+      padding: 0; margin: 0; } body { -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale; } a[x-apple-data-detectors] { color:
+      inherit !important; text-decoration: none !important; } u + .emailify a {
+      color: inherit !important; text-decoration: none!important; }
+      #MessageViewBody a { color: inherit !important; text-decoration:
+      none!important; }div.gpc { font-size: 0; } @media only screen and
+      (max-width:625px) { .emailify { height:100% !important; margin:0
+      !important; padding:0 !important; width:100% !important; } td.ico.v >
+      div.il > a.l.m, td.ico.v .mn-label { padding-right: 0!important;
+      padding-bottom: 16px!important; } .fwm img { width: 100%!important;
+      max-width: 100%!important; height: auto!important; } .u .fwm img {
+      max-width: none!important; width: 100%!important; height: auto!important;
+      } .aw img { width: auto!important; margin-left: auto!important;
+      margin-right: auto!important; } .awl img { width: auto!important;
+      margin-right: auto!important; } .awr img { width: auto!important;
+      margin-left: auto!important; } .ah img { height: auto!important; } td.b.nw
+      > table, td.b.nw a { width: auto!important; } td.stk { border:0!important;
+      } td.u { height:auto!important; } br.sb { display: none!important; }
+      .thd-1 .i-thumbnail { display: inline-block!important; height:
+      auto!important; overflow: hidden!important; } .hd-1 { display:
+      block!important; height: auto!important; overflow: visible!important; }
+      .hm-1 { display: none!important; max-width: 0!important; max-height:
+      0!important; overflow: hidden!important; mso-hide: all!important; } .ht-1
+      { display: table!important; height: auto!important; overflow:
+      visible!important; } .hr-1 { display: table-row!important; height:
+      auto!important; overflow: visible!important; } .hc-1 { display:
+      table-cell!important; height: auto!important; overflow: visible!important;
+      } td.ba > table > tbody > tr > td > a { display: flex!important;
+      justify-content: space-between!important; } td.fw-1.ba > table > tbody >
+      tr > td > a { display: flex!important; justify-content:
+      space-between!important; } td.ba img { margin: 0!important; display:
+      block!important; } td.b td { background-size: cover!important; } div.r >
+      table > tbody > tr > td { direction: ltr!important; } img {
+      background-color: transparent!important; } div.r.pr-16 > table > tbody >
+      tr > td, div.r.pr-16 > div > table > tbody > tr > td {
+      padding-right:16px!important } div.r.pl-16 > table > tbody > tr > td,
+      div.r.pl-16 > div > table > tbody > tr > td { padding-left:16px!important
+      } div.r.pt-24 > table > tbody > tr > td, div.r.pt-24 > div > table > tbody
+      > tr > td { padding-top:24px!important } div.r.pb-24 > table > tbody > tr
+      > td, div.r.pb-24 > div > table > tbody > tr > td {
+      padding-bottom:24px!important } div.r.s-16 > table > tbody > tr > td >
+      div.gtr > table > tbody > tr > td { padding-bottom:16px!important; }
+      div.g.mb-16 > table > tbody > tr > td { padding-bottom:16px!important }
+      div.w.pr-16 > table > tbody > tr > td, div.w.pr-16 > div > table > tbody >
+      tr > td { padding-right:16px!important; } div.w.pl-16 > table > tbody > tr
+      > td, div.w.pl-16 > div > table > tbody > tr > td {
+      padding-left:16px!important; } }@media screen yahoo { .hd-1, .ds-1 {
+      mso-hide: all!important; display: none!important; height: 0!important;
+      overflow: hidden!important; } } @media (prefers-color-scheme: light) and
+      (max-width:625px) { .ds-1.hd-1 { display: none!important; height:
+      0!important; overflow: hidden!important; } } @media (prefers-color-scheme:
+      dark) and (max-width:625px) { .ds-1.hd-1 { display: block!important;
+      height: auto!important; overflow: visible!important; } }
+    </mj-style>
+    <mj-html-attributes>
+      <mj-selector path="td.s">
+        <mj-html-attribute name="aria-hidden"> true </mj-html-attribute>
+      </mj-selector>
+      <mj-selector path="td.mso-btn-left > table > tbody > tr > td">
+        <mj-html-attribute name="class"> bal </mj-html-attribute>
+      </mj-selector>
+    </mj-html-attributes>
+    <mj-attributes>
+      <mj-all font-family="Arial, sans-serif"></mj-all>
+    </mj-attributes>
+    <mj-breakpoint width="625px"></mj-breakpoint>
+    <mj-font
+      href="https://fonts.googleapis.com/css?family=Red Hat Display:400,700"
+      name="Red Hat Display"
+    ></mj-font>
+    <mj-font
+      href="https://fonts.googleapis.com/css?family=Inter:400"
+      name="Inter"
+    ></mj-font>
+    <mj-style inline="inline">
+      body, .emailify { mso-line-height-rule: exactly; mso-hyphenate: none; }
+      .hd-1, .thd-1 .i-thumbnail, .ht-1, .hr-1, .hc-1, .ds-1 { mso-hide: all;
+      display: none; height: 0; overflow: hidden; } .hd-1 *, .ds-1 * { mso-hide:
+      all; } .hd-1, .hd-1 td, .ds-1, .ds-1 td { mso-padding-top-alt:0;
+      mso-padding-bottom-alt:0; } sup, sub { line-height: 0; font-size: 75%;
+      }.cr- > table > tbody > tr > td, .cr- > table { border-collapse: separate;
+      border-spacing: 0px; }div.cs-190 > table > tbody > tr > td { box-shadow: 0
+      4px 4px 0 rgba(21, 21, 21, 0.25) } div.cs-194 > table > tbody > tr > td {
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) } div.cs-198 > table > tbody >
+      tr > td { box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25) } div.ss-1103 >
+      table { box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.25) }
+    </mj-style>
+    <mj-raw>
+      <meta
+        name="format-detection"
+        content="telephone=no, date=no, address=no, email=no, url=no"
+      />
+      <meta name="x-apple-disable-message-reformatting" />
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+
+      <!--[if gte mso 9]>
+        <style>
+          a:link,
+          span.MsoHyperlink {
+            mso-style-priority: 99;
+            color: inherit;
+            text-decoration: none;
+          }
+          a:visited,
+          span.MsoHyperlinkFollowed {
+            mso-style-priority: 99;
+            color: inherit;
+            text-decoration: none;
+          }
+          li {
+            margin-left: -1em !important;
+          }
+          table,
+          td,
+          p,
+          div,
+          span,
+          ul,
+          ol,
+          li,
+          a,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            mso-hyphenate: none;
+          }
+          sup,
+          sub {
+            font-size: 100% !important;
+          }
+          .bal {
+            text-align: left !important;
+          }
+          img {
+            background-color: transparent !important;
+          }
+        </style>
+      <![endif]-->
+
+      <!--[if mso]><!-- -->
+      <style>
+        .cr- > table > tbody > tr > td,
+        .c-r > table {
+          border-collapse: collapse;
+        }
+      </style>
+      <!--<![endif]-->
+    </mj-raw>
+  </mj-head>
+  <mj-body background-color="#1e1e1e" css-class="bg " width="626px">
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pr-16 pl-16 "
+      padding="16px 16px 16px 16px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="594px"
+      >
+        <mj-image
+          align="center"
+          alt=""
+          css-class="c  "
+          fluid-on-mobile="false"
+          height="auto"
+          padding="0"
+          src="https://e.hypermatic.com/5120a98cf829a2d98b45317af5e843d1.png"
+          width="188px"
+        ></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#133595"
+      border-bottom="2px solid #00ffb3"
+      border-left="none"
+      border-right="none"
+      border-top="none"
+      css-class="r  pr-16 pl-16 "
+      padding="11px 32px 11px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="562px"
+      >
+        <mj-text
+          align="center"
+          color="black"
+          css-class="x  "
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 37px">
+            <span
+              style="
+                font-size: 28px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #ffffff;
+                line-height: 132%;
+                mso-line-height-alt: 37px;
+              "
+              >&iexcl;Recuerda tu pago pendiente, </span
+            >
+          </p>
+          <p style="margin: 0; mso-line-height-alt: 37px">
+            <span
+              style="
+                font-size: 28px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #ffffff;
+                line-height: 132%;
+                mso-line-height-alt: 37px;
+              "
+              >est&aacute;s a tiempo de ponerte al d&iacute;a!</span
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pr-16 pl-16 "
+      padding="3px 32px 3px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="562px"
+      >
+        <mj-text
+          align="left"
+          color="black"
+          css-class="x  "
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 26px">
+            <span
+              style="
+                font-size: 20px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 700;
+                color: #101010;
+                line-height: 130%;
+                mso-line-height-alt: 26px;
+              "
+            >
+              Hola, [Nombre del cliente]</span
+            >
+          </p>
+          <p style="margin: 0; mso-line-height-alt: 26px">
+            <span
+              style="
+                font-size: 20px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 700;
+                color: #101010;
+                line-height: 130%;
+                mso-line-height-alt: 26px;
+              "
+              >&nbsp;</span
+            >
+          </p>
+          <p style="margin: 0; mso-line-height-alt: 23px">
+            <span
+              style="
+                font-size: 18px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 700;
+                color: #101010;
+                line-height: 128%;
+                mso-line-height-alt: 23px;
+              "
+              >Tienes una o m&aacute;s cuotas pendientes con
+              Sistecr&eacute;dito. </span
+            ><span
+              style="
+                font-size: 18px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #000000;
+                line-height: 133%;
+                mso-line-height-alt: 24px;
+              "
+              >Te aconsejamos pagar lo m&aacute;s pronto que puedas, para que tu
+              deuda no siga aumentando por intereses de mora y mantengas las
+              puertas abiertas al momento de solicitar un nuevo cr&eacute;dito
+              en esta u otras entidades financieras.</span
+            >
+          </p>
+          <p style="margin: 0; mso-line-height-alt: 24px">
+            <span
+              style="
+                font-size: 18px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #000000;
+                line-height: 133%;
+                mso-line-height-alt: 24px;
+              "
+              >&nbsp;</span
+            >
+          </p>
+          <p style="margin: 0; mso-line-height-alt: 24px">
+            <span
+              style="
+                font-size: 18px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #000000;
+                line-height: 133%;
+                mso-line-height-alt: 24px;
+              "
+              >Ten presente que en caso de reporte, seg&uacute;n la Ley 1266 de
+              2008, a partir de la fecha de pago del cr&eacute;dito, la
+              permanencia del dato negativo en Centrales de Riesgo ser&aacute;
+              por el doble de tiempo que estuviste en mora con tu deuda, sin
+              superar los 4 a&ntilde;os.</span
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pr-16 pl-16 "
+      padding="12px 32px 12px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="562px"
+      >
+        <mj-text
+          align="left"
+          color="black"
+          css-class="x  "
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 26px">
+            <span
+              style="
+                font-size: 20px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 700;
+                color: #020202;
+                line-height: 130%;
+                mso-line-height-alt: 26px;
+              "
+              >Consulta f&aacute;cil y r&aacute;pido como pagar tus
+              cuotas:</span
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pr-16 pl-16 "
+      padding="0px 16px 0px 16px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="594px"
+      >
+        <mj-spacer css-class="s  " height="40px" padding="0"></mj-spacer>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pt-24 pr-16 pb-24 pl-16 s-16 "
+      padding="16px 16px 16px 16px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="#fffffe"
+        border-radius="15px 15px 15px 15px"
+        border="none"
+        css-class="m cs-190 c  cr- "
+        padding="22px 0px 22px 0px"
+        vertical-align="top"
+        width="200px"
+      >
+        <mj-image
+          align="center"
+          alt=""
+          css-class="c  cr- m"
+          fluid-on-mobile="false"
+          height="auto"
+          padding-bottom="4px"
+          padding="0"
+          src="https://e.hypermatic.com/f2395b03b565bed7033bafb7dec1f60f.png"
+          width="21px"
+        ></mj-image>
+        <mj-text
+          align="center"
+          color="black"
+          css-class="x  m"
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding-bottom="4px"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 19px">
+            <span
+              style="
+                font-size: 13px;
+                font-family: 'Inter', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #777777;
+                line-height: 146%;
+                mso-line-height-alt: 19px;
+              "
+              >Elige el canal que desees</span
+            >
+          </p>
+        </mj-text>
+        <mj-image
+          align="center"
+          alt=""
+          css-class="c  cr- "
+          fluid-on-mobile="false"
+          height="auto"
+          padding-bottom="0"
+          padding="0"
+          src="https://e.hypermatic.com/e6a7a1e4a74f8a7d2ff7d54fe019f8b8.png"
+          width="172px"
+        ></mj-image>
+      </mj-column>
+      <mj-column css-class="g mb-16" padding="0" width="16px"> </mj-column>
+      <mj-column
+        background-color="#fffffe"
+        border-radius="15px 15px 15px 15px"
+        border="none"
+        css-class="m cs-194 c  cr- "
+        padding="27px 0px 27px 0px"
+        vertical-align="top"
+        width="162px"
+      >
+        <mj-image
+          align="center"
+          alt=""
+          css-class="c  m"
+          fluid-on-mobile="false"
+          height="auto"
+          padding-bottom="4px"
+          padding="0"
+          src="https://e.hypermatic.com/cf4cf81c053b45332a1f099a66da676e.png"
+          width="36px"
+        ></mj-image>
+        <mj-text
+          align="center"
+          color="black"
+          css-class="x  "
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 19px">
+            <span
+              style="
+                font-size: 13px;
+                font-family: 'Inter', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #777777;
+                line-height: 146%;
+                mso-line-height-alt: 19px;
+              "
+              >Elige el canal que desees</span
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+      <mj-column css-class="g mb-16" padding="0" width="16px"> </mj-column>
+      <mj-column
+        background-color="#fffffe"
+        border-radius="15px 15px 15px 15px"
+        border="none"
+        css-class="cs-198 c  cr- "
+        padding="27px 0px 27px 0px"
+        vertical-align="top"
+        width="200px"
+      >
+        <mj-image
+          align="center"
+          alt=""
+          css-class="c  m"
+          fluid-on-mobile="false"
+          height="auto"
+          padding-bottom="4px"
+          padding="0"
+          src="https://e.hypermatic.com/60022e8e5d4f7575515778d6a4daf85d.png"
+          width="35px"
+        ></mj-image>
+        <mj-text
+          align="center"
+          color="black"
+          css-class="x  "
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 19px">
+            <span
+              style="
+                font-size: 13px;
+                font-family: 'Inter', 'Arial', sans-serif;
+                font-weight: 400;
+                color: #777777;
+                line-height: 146%;
+                mso-line-height-alt: 19px;
+              "
+              >Elige el canal que desees</span
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pr-16 pl-16 "
+      padding="12px 32px 12px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="562px"
+      >
+        <mj-text
+          align="left"
+          color="black"
+          css-class="x  "
+          font-family="Arial, sans-serif"
+          font-size="13px"
+          line-height="1;"
+          padding="0px"
+        >
+          <p style="margin: 0; mso-line-height-alt: 26px">
+            <span
+              style="
+                font-size: 20px;
+                font-family: 'Red Hat Display', 'Arial', sans-serif;
+                font-weight: 700;
+                color: #020202;
+                line-height: 130%;
+                mso-line-height-alt: 26px;
+              "
+              >Puedes pagar por el canal y medio que prefieras:</span
+            >
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-wrapper
+      background-color="#fffffe"
+      background-position="center center"
+      background-repeat="no-repeat"
+      background-size="cover"
+      background-url="img/1102.png"
+      border="none"
+      css-class="w  pr-16 pl-16 "
+      padding="16px 16px 16px 16px"
+      text-align="center"
+    >
+      <mj-section
+        background-color="#fffffe"
+        border-radius="15px 15px 15px 15px"
+        border="none"
+        css-class="ss-1103 r  pr-16 pl-16 "
+        padding="16px 16px 16px 16px"
+        text-align="left"
+      >
+        <mj-group css-class="gpc" direction="ltr" width="100%">
+          <mj-column
+            background-color="transparent"
+            border="none"
+            css-class="m c  "
+            padding="0px 100px 0px 0px"
+            vertical-align="middle"
+            width="6.7616%"
+          >
+          </mj-column>
+          <mj-column css-class="g" padding="0" width="2.847%"> </mj-column>
+          <mj-column
+            background-color="transparent"
+            border="none"
+            css-class="c  "
+            vertical-align="middle"
+            width="90.3914%"
+          >
+            <mj-text
+              align="left"
+              color="black"
+              css-class="x  "
+              font-family="Arial, sans-serif"
+              font-size="13px"
+              line-height="1;"
+              padding="0px"
+            >
+              <p style="margin: 0; mso-line-height-alt: 18px">
+                <span
+                  style="
+                    font-size: 14px;
+                    font-family: 'Red Hat Display', 'Arial', sans-serif;
+                    font-weight: 700;
+                    color: #000000;
+                    line-height: 129%;
+                    mso-line-height-alt: 18px;
+                  "
+                  >Almac&eacute;n donde realizaste la compra.</span
+                >
+              </p>
+              <p style="margin: 0; mso-line-height-alt: 18px">
+                <span
+                  style="
+                    font-size: 14px;
+                    font-family: 'Red Hat Display', 'Arial', sans-serif;
+                    font-weight: 700;
+                    color: #000000;
+                    line-height: 129%;
+                    mso-line-height-alt: 18px;
+                  "
+                  >(Solo en efectivo)</span
+                >
+              </p>
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+      <mj-section padding="0">
+        <mj-column padding="0">
+          <mj-spacer css-class="s" height="8px" padding="0"></mj-spacer>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="transparent" css-class=" " padding="0">
+        <mj-column padding="0">
+          <mj-image
+            align="center"
+            alt=""
+            css-class="i  fw-1 "
+            fluid-on-mobile="true"
+            height="auto"
+            padding="0"
+            src="https://e.hypermatic.com/c689ba4955c6f33b2212441731507f06.png"
+            width="594px"
+          ></mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0">
+        <mj-column padding="0">
+          <mj-spacer css-class="s" height="8px" padding="0"></mj-spacer>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="transparent" css-class=" " padding="0">
+        <mj-column padding="0">
+          <mj-image
+            align="center"
+            alt=""
+            css-class="i  fw-1 "
+            fluid-on-mobile="true"
+            height="auto"
+            padding="0"
+            src="https://e.hypermatic.com/2d12b9a3b1aabd2ec4ebb895d2df2b03.png"
+            width="594px"
+          ></mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section padding="0">
+        <mj-column padding="0">
+          <mj-spacer css-class="s" height="8px" padding="0"></mj-spacer>
+        </mj-column>
+      </mj-section>
+      <mj-section background-color="transparent" css-class=" " padding="0">
+        <mj-column padding="0">
+          <mj-image
+            align="center"
+            alt=""
+            css-class="i  "
+            fluid-on-mobile="false"
+            height="auto"
+            padding="0"
+            src="https://e.hypermatic.com/b3c6e045eac9fb57a6338009429b351f.png"
+            width="39px"
+          ></mj-image>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+    <mj-wrapper
+      background-color="#fffffe"
+      border="none"
+      css-class="w  pr-16 pl-16 "
+      padding="16px 16px 90px 16px"
+      text-align="left"
+    >
+      <mj-section
+        background-color="#fffdfd"
+        border-bottom="1px solid #d0cccc"
+        border-left="1px solid #d0cccc"
+        border-radius="4px 4px 4px 4px"
+        border-right="1px solid #d0cccc"
+        border-top="1px solid #d0cccc"
+        css-class="r  pr-16 pl-16 "
+        padding="0px 15px 0px 15px"
+        text-align="left"
+      >
+        <mj-group css-class="gpc" direction="ltr" width="100%">
+          <mj-column
+            background-color="transparent"
+            border="none"
+            css-class="m c  "
+            vertical-align="top"
+            width="48.75%"
+          >
+            <mj-image
+              align="center"
+              alt=""
+              css-class="c  m"
+              fluid-on-mobile="false"
+              height="auto"
+              padding-bottom="8px"
+              padding="0"
+              src="https://e.hypermatic.com/313c0e6eee77cf16bfbe435917479931.png"
+              width="197px"
+            ></mj-image>
+            <mj-text
+              align="left"
+              color="black"
+              css-class="x  "
+              font-family="Arial, sans-serif"
+              font-size="13px"
+              line-height="1;"
+              padding="0px"
+            >
+              <p style="margin: 0; mso-line-height-alt: 18px">
+                <span
+                  style="
+                    font-size: 14px;
+                    font-family: 'Red Hat Display', 'Arial', sans-serif;
+                    font-weight: 400;
+                    color: #000000;
+                    line-height: 129%;
+                    letter-spacing: 1px;
+                    mso-line-height-alt: 18px;
+                  "
+                  >*V&aacute;lido a nivel nacional.</span
+                >
+              </p>
+            </mj-text>
+          </mj-column>
+          <mj-column css-class="g" padding="0" width="2.8571%"> </mj-column>
+          <mj-column
+            background-color="transparent"
+            border="none"
+            css-class="c  "
+            vertical-align="top"
+            width="48.75%"
+          >
+            <mj-image
+              align="center"
+              alt=""
+              css-class="c  m"
+              fluid-on-mobile="false"
+              height="auto"
+              padding-bottom="8px"
+              padding="0"
+              src="https://e.hypermatic.com/313c0e6eee77cf16bfbe435917479931.png"
+              width="197px"
+            ></mj-image>
+            <mj-text
+              align="left"
+              color="black"
+              css-class="x  "
+              font-family="Arial, sans-serif"
+              font-size="13px"
+              line-height="1;"
+              padding="0px"
+            >
+              <p style="margin: 0; mso-line-height-alt: 18px">
+                <span
+                  style="
+                    font-size: 14px;
+                    font-family: 'Red Hat Display', 'Arial', sans-serif;
+                    font-weight: 400;
+                    color: #000000;
+                    line-height: 129%;
+                    letter-spacing: 1px;
+                    mso-line-height-alt: 18px;
+                  "
+                  >*V&aacute;lido a nivel nacional.</span
+                >
+              </p>
+            </mj-text>
+          </mj-column>
+        </mj-group>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>

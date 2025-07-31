@@ -1,0 +1,911 @@
+<mjml>
+  <mj-head>
+    <mj-title>Basic MJML Templat</mj-title>
+    <mj-font
+      name="Red Hat Display"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400&display=swap"
+    />
+    <mj-attributes>
+      <mj-all font-family="Roboto, Arial, sans-serif" />
+      <mj-text font-size="16px" line-height="24px" />
+      <mj-section background-color="#ffffff" padding="20px" />
+    </mj-attributes>
+    <mj-style>
+      .step-card-container { display: flex; flex-direction: row;
+      justify-content: space-between; gap: 20px; margin: 0px 15px 0px 15px;}
+      .step-card { background: white; padding: 20px; border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); border-bottom: blue 3px solid;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: start; } .step-content{ display: grid;} .step-1-grid{
+      display: flex; align-items: start; justify-content: space-between; }
+      .step-1-grid-item{ display: flex; flex-direction: column; align-items:
+      center; justify-content: start; width: 40px; } .step-grid-text{
+      font-family: Red Hat Display; font-weight: 400; font-style: normal;
+      font-size: 11px; color: #333; } .step-title{ font-family: Red Hat Display;
+      font-weight: 500; font-style: normal; font-size: 14px; text-align: center;
+      color: #333; } .step-1-title{ font-family: Red Hat Display; font-weight:
+      500; font-style: normal; font-size: 14px; letter-spacing: 0%; text-align:
+      center; color: #333; } @media only screen and (max-width: 480px)
+      {.step-1-grid{ gap: 0px !important; justify-content: start; } .step-1-img{
+      width: 20px; padding-right: 15px} .step-title{text-align: left}
+      .step-1-title{ line-height: 0px; } .step-content{ } .step-card-container {
+      display: flex; flex-direction: column; gap: 10px; } .step-grid-text{
+      display: none; } .step-card { padding: 11px; display: flex;
+      flex-direction: row; align-items: center; justify-content: ce; gap: 0px;
+      height: auto; }}
+    </mj-style>
+    <mj-style>
+      .foot-container { display: flex; align-items: left; width: 100%;
+      justify-content: space-between; margin-left: 5%; } .foot-container-1{
+      display: flex; align-items: flex-end; gap: 10px; margin-bottom: 12px;}
+      .card-container { display: flex; flex-direction: column; align-items:
+      center; max-width: 100%; } @media only screen and (max-width: 480px) {
+      .foot-container { display: flex;flex-direction: column; align-items:
+      center;background-color: red; justify-content:center;}
+      .foot-container-1{position: relative; display: flex; background-color:
+      blue; align-items: left; gap: 10px; margin-bottom: 12px; width: 60%;}
+      .foot-container-1-img{ position: absolute; top: 0; object-fit: contain;
+      left: 0; background-color: orange; }}
+    </mj-style>
+    <mj-style>
+      .fourth-container-flex-container { display: flex; gap: 10px; flex-wrap:
+      nowrap; padding: 0 30px;width: 100%; box-sizing: border-box; }
+      .fourth-container-flex-box { flex: 1 1 0; min-width: 0; box-sizing:
+      border-box; padding: 10px; background-color: #f0f0f0; font-size: 14px;
+      border-radius: 4px; } .fourth-container-flex-box:nth-child(2) {
+      background-color: #f0f0f0; } @media only screen and (max-width: 600px) {
+      .fourth-container-flex-box { font-size: 12px; } }
+    </mj-style>
+    <mj-style>
+      .second-container-text{width: 50%; text-align: start; display:
+      inline-block; font-family: Red Hat Display; font-size: 14px; margin-left:
+      15px; background-color: green;} .second-container-flex-container{ display:
+      flex; justify-content: space-between; align-items: center; border: 1px
+      solid #ccc; border-radius: 10px; padding: 12px; background-color: rgb(235,
+      245, 250); height: 65px; position: relative; }
+      .second-container-flex-items { display:flex; width: 100%; font-size:
+      14px;color: black; text-align: left; height: 55px; margin-right: 20px;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0 10px;}.second-container-flex-item{ color:black ;display:flex;
+      width: 100%; font-size: 14px;color: black; text-align: left; height: 55px;
+      display: flex; align-items: center; padding: 0 10px} @media only screen
+      and (max-width: 480px) { .second-container-flex-container
+      {background-color: yellow;display:block;flex-direction:
+      column;height:120px}.second-container-text { width: 100%;
+      background-color: purple; display: flex;align-items: center;
+      margin-left:10px; text-align: center; }.second-container-flex-item{
+      background-color: purple; width: 100%;padding:0 0px
+      }.second-container-flex-items{width:100% ;margin-right:0px;padding:0 20px
+      ;background-color: green;}}
+    </mj-style>
+    <mj-style>
+      .contact-card { display: flex; align-items: flex-start; gap: 10px; }
+      .contact-card img { width: 30px; height: auto; flex-shrink: 0; }
+      .contact-info { font-size: 12px; color: #000; font-family: Arial,
+      sans-serif; line-height: 1.4; } .contact-highlight { font-weight: 700;
+      font-family: 'Red Hat Display', Arial, sans-serif; }
+    </mj-style>
+    <mj-style>
+      @media only screen and (max-width: 480px) { .section-four-card { padding:
+      10px !important; height: 100px !important; } .section-four-card-content h3
+      { font-size: 12px !important; } .section-four-card-content p { font-size:
+      10px !important; } .section-four-no-stack-column { width: 33.33%
+      !important; padding: 5px !important; } }
+    </mj-style>
+    <mj-style>
+      @media (max-width: 600px) { .responsive-container { flex-direction: column
+      !important; gap: 16px; } .responsive-link, .responsive-download {
+      justify-content: center !important; width: 100% !important; text-align:
+      center; } }
+    </mj-style>
+    <mj-breakpoint width="625px" />
+    <mj-raw>
+      <meta
+        name="format-detection"
+        content="telephone=no, date=no, address=no, email=no, url=no"
+      />
+      <meta name="x-apple-disable-message-reformatting" />
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+      <!--[if gte mso 9]>
+        <style>
+          a:link,
+          span.MsoHyperlink {
+            color: inherit;
+            text-decoration: none;
+          }
+          a:visited,
+          span.MsoHyperlinkFollowed {
+            color: inherit;
+            text-decoration: none;
+          }
+        </style>
+      <![endif]-->
+    </mj-raw>
+  </mj-head>
+  <mj-body background-color="#f4f4f4">
+    <!-- Logo -->
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      css-class="r  pr-16 pl-16 "
+      padding="16px 16px 16px 16px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        css-class="c  "
+        vertical-align="middle"
+        width="594px"
+      >
+        <mj-image
+          align="center"
+          alt=""
+          css-class="c  "
+          fluid-on-mobile="false"
+          height="auto"
+          padding="0"
+          src="https://e.hypermatic.com/5120a98cf829a2d98b45317af5e843d1.png"
+          width="188px"
+        ></mj-image>
+      </mj-column>
+    </mj-section>
+    <!-- Header -->
+    <mj-section
+      background-color="#133595"
+      border-bottom="2px solid #00ffb3"
+      border-left="none"
+      border-right="none"
+      border-top="none"
+      padding="11px 32px 11px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        vertical-align="middle"
+        width="562px"
+      >
+        <mj-text
+          align="center"
+          color="#ffffff"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="28px"
+          font-weight="400"
+          line-height="37px"
+          padding="0px"
+        >
+          <p style="margin: 0">¡Recuerda tu pago pendiente,</p>
+          <p style="margin: 0">estás a tiempo de ponerte al día!</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Content -->
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      padding="12px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        vertical-align="middle"
+        width="562px"
+      >
+        <mj-text
+          align="left"
+          color="#101010"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="20px"
+          font-weight="700"
+          line-height="26px"
+          padding="0px"
+        >
+          <p style="margin: 0">Hola, [Nombre del cliente]</p>
+        </mj-text>
+        <mj-spacer height="26px" />
+        <mj-text
+          align="left"
+          color="#101010"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="18px"
+          line-height="23px"
+          padding="0px"
+        >
+          <p style="margin: 0">
+            <span style="font-weight: 700"
+              >Tienes una o más cuotas pendientes con Sistecrédito.
+            </span>
+            <span style="font-weight: 400"
+              >Te aconsejamos pagar lo más pronto que puedas, para que tu deuda
+              no siga aumentando por intereses de mora y mantengas las puertas
+              abiertas al momento de solicitar un nuevo crédito en esta u otras
+              entidades financieras.</span
+            >
+          </p>
+        </mj-text>
+        <mj-spacer height="24px" />
+        <mj-text
+          align="left"
+          color="#000000"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="18px"
+          font-weight="400"
+          line-height="24px"
+          padding="0px"
+        >
+          <p style="margin: 0">
+            Ten presente que en caso de reporte, según la Ley 1266 de 2008, a
+            partir de la fecha de pago del crédito, la permanencia del dato
+            negativo en Centrales de Riesgo será por el doble de tiempo que
+            estuviste en mora con tu deuda, sin superar los 4 años.
+          </p>
+        </mj-text>
+        <mj-spacer height="24px" />
+        <mj-text
+          align="left"
+          color="#020202"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="20px"
+          font-weight="700"
+          line-height="26px"
+          padding="0px"
+        >
+          <p style="margin: 0">
+            Consulta fácil y rápido como pagar tus cuotas:
+          </p>
+        </mj-text>
+        <mj-spacer height="40px" />
+      </mj-column>
+    </mj-section>
+    <!-- Card Container -->
+    <mj-section padding="12px">
+      <mj-column css-class="custom-column" padding="0px">
+        <mj-raw>
+          <div class="step-card-container">
+            <!-- Step 1 -->
+            <div class="step-card">
+              <img
+                class="step-1-img"
+                src="https://e.hypermatic.com/f2395b03b565bed7033bafb7dec1f60f.png"
+                width="20"
+              />
+              <div class="step-content">
+                <p class="step-1-title">Elige el canal que desees</p>
+                <div class="step-1-grid">
+                  <div class="step-1-grid-item">
+                    <img
+                      width="29"
+                      src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/b01c2cb2-ab75-408a-958c-254836eae7e1/38x38.png"
+                    />
+                    <p class="step-grid-text">almacen</p>
+                  </div>
+                  <div class="step-1-grid-item">
+                    <img
+                      width="30"
+                      src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/3ac01891-8db3-4f19-9bfa-2d51f9a794b8/39x38.png"
+                    />
+                    <p class="step-grid-text">sitioweb</p>
+                  </div>
+                  <div class="step-1-grid-item">
+                    <img
+                      src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/5e97cbe3-b13f-4f55-93f7-787b9cf212e9/39x38.png"
+                      width="30"
+                    />
+                    <p class="step-grid-text">app</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Step 2 -->
+            <div class="step-card">
+              <img
+                src="https://e.hypermatic.com/cf4cf81c053b45332a1f099a66da676e.png"
+                width="40"
+                height="15"
+                style="padding-right: 10px"
+              />
+              <div class="step-content">
+                <p class="step-title">
+                  Selecciona el botón<br /><span class="step-1-sub"
+                    >Pago rápido</span
+                  >
+                </p>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="step-card">
+              <img
+                src="https://e.hypermatic.com/60022e8e5d4f7575515778d6a4daf85d.png"
+                width="35"
+                style="padding-right: 10px"
+              />
+              <div class="step-content">
+                <p class="step-title">
+                  Digita tu <span class="step-1-sub">tipo y número</span
+                  ><br />de documento
+                </p>
+              </div>
+            </div>
+          </div>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <!-- Cards Stack -->
+    <mj-section padding="0px" background-color="#ffffff">
+      <mj-column padding="0px">
+        <!-- Card 1 -->
+        <mj-table>
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              border: 1px solid #ccc;
+              border-radius: 10px;
+              padding: 12px;
+              background-color: #ffffff;
+            "
+            class="flex-container"
+          >
+            <div class="second-container-flex-item">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/b01c2cb2-ab75-408a-958c-254836eae7e1/38x38.png"
+                style="object-fit: contain"
+              />
+              <span
+                style="
+                  width: 100%;
+                  text-align: start;
+                  display: inline-block;
+                  font-family: Red Hat Display;
+                  font-size: 14px;
+                  margin-left: 15px;
+                "
+              >
+                <span style="font-weight: 700">Almacen </span>
+                <span style="font-weight: 400">
+                  dondo realizaste la compra<br />
+                </span>
+                <span style="font-weight: 700">(Solo en efectivo)</span>
+              </span>
+            </div>
+          </div>
+        </mj-table>
+
+        <!-- Card 2 -->
+        <mj-table>
+          <div class="second-container-flex-container">
+            <div class="second-container-flex-item">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/3ac01891-8db3-4f19-9bfa-2d51f9a794b8/39x38.png"
+                style="object-fit: contain"
+              />
+              <span class="second-container-text">
+                <span style="font-weight: 700"> www.sistecredito.com</span>
+                <span style="font-weight: 400">paga con :</span>
+              </span>
+            </div>
+            <div class="second-container-flex-items">
+              <!-- First item: image + text below -->
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  background-color: orange;
+                "
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/cc1d4584-8792-41b0-bdc6-3d5794c5b282/38x38.png"
+                  style="width: 30px; height: auto"
+                />
+                <div style="font-size: 12px; color: black; text-align: center">
+                  Nequi
+                </div>
+              </div>
+
+              <!-- Second item -->
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/b61c6eb4-6bd9-4dd0-bcd2-000ab3eb52de/38x38.png"
+                  style="width: 30px; height: auto"
+                />
+                <div style="font-size: 12px; color: black; text-align: center">
+                  Bancolombia
+                </div>
+              </div>
+
+              <!-- Third item -->
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 55px;
+                  min-height: 60px;
+                  margin-top: 18px;
+                "
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/fee2dd04-6b75-498c-b9d4-575cb1bf7f7b/38x38.png"
+                  style="width: 30px; height: auto"
+                />
+                <div
+                  style="
+                    font-size: 12px;
+                    color: black;
+                    text-align: center;
+                    word-wrap: break-word;
+                  "
+                >
+                  Cualquier banco
+                </div>
+              </div>
+              <div style="position: absolute; top: 40px; right: 12px">
+                <a
+                  href="https://example.com"
+                  target="_blank"
+                  style="display: block"
+                >
+                  <img
+                    src="http://cdn.mcauto-images-production.sendgrid.net/ec5a9a81cb919a10/460ab0e9-9d50-4081-8eff-bf48fc15373d/48x48.png "
+                    alt="Right arrow"
+                    style="display: block; width: 15px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </mj-table>
+        <!-- Card 3 -->
+        <mj-table>
+          <div class="second-container-flex-container">
+            <div class="second-container-flex-item">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/5e97cbe3-b13f-4f55-93f7-787b9cf212e9/39x38.png"
+                style="object-fit: contain"
+              />
+              <span class="second-container-text">
+                <span style="font-weight: 700"> App Sistecredito</span>
+                <span style="font-weight: 400">paga con :</span>
+              </span>
+            </div>
+            <div class="second-container-flex-items">
+              <!-- First item: image + text below -->
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/cc1d4584-8792-41b0-bdc6-3d5794c5b282/38x38.png"
+                  style="width: 30px; height: auto"
+                />
+                <div style="font-size: 12px; color: black; text-align: center">
+                  Nequi
+                </div>
+              </div>
+
+              <!-- Second item -->
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                "
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/b61c6eb4-6bd9-4dd0-bcd2-000ab3eb52de/38x38.png"
+                  style="width: 30px; height: auto"
+                />
+                <div style="font-size: 12px; color: black; text-align: center">
+                  Bancolombia
+                </div>
+              </div>
+
+              <!-- Third item -->
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  width: 55px;
+                  min-height: 60px;
+                  margin-top: 18px;
+                "
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/fee2dd04-6b75-498c-b9d4-575cb1bf7f7b/38x38.png"
+                  style="width: 30px; height: auto"
+                />
+                <div
+                  style="
+                    font-size: 12px;
+                    color: black;
+                    text-align: center;
+                    word-wrap: break-word;
+                  "
+                >
+                  Cualquier banco
+                </div>
+              </div>
+              <div style="position: absolute; top: 40px; right: 12px">
+                <a
+                  href="https://example.com"
+                  target="_blank"
+                  style="display: block"
+                >
+                  <img
+                    src="http://cdn.mcauto-images-production.sendgrid.net/ec5a9a81cb919a10/460ab0e9-9d50-4081-8eff-bf48fc15373d/48x48.png "
+                    alt="Right arrow"
+                    style="display: block; width: 15px"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+
+    <mj-section
+      background-color="#fffffe"
+      border="none"
+      padding="12px 32px"
+      text-align="left"
+    >
+      <mj-column
+        background-color="transparent"
+        border="none"
+        vertical-align="middle"
+        width="100%"
+      >
+        <mj-text
+          align="left"
+          color="#101010"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="16px"
+          font-weight="700"
+          line-height="26px"
+          padding="0px"
+        >
+          <p style="margin: 0">Otras opciones de pago</p>
+        </mj-text>
+        <mj-text
+          align="left"
+          color="#101010"
+          font-family="Red Hat Display, Arial, sans-serif"
+          font-size="14px"
+          font-weight="400"
+          line-height="14px"
+          padding="0px"
+        >
+          <p style="margin: 0">
+            Deberás brindar el número de la cédula para que se identifiquen tus
+            créditos.
+          </p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- Two Cards Section -->
+
+    <mj-section padding="0px">
+      <mj-column padding="0px">
+        <mj-raw>
+          <div class="fourth-container-flex-container">
+            <div class="fourth-container-flex-box">
+              <p style="font-size: 12px; color: black; margin: 0">
+                <span style="font-weight: 700">Efecty</span
+                ><span style="font-weight: 400"> : convenio 112901.</span>
+              </p>
+              <p
+                style="
+                  color: black;
+                  font-size: 12px;
+                  margin: 4px 0 0;
+                  font-weight: 400;
+                "
+              >
+                *Válido a nivel nacional.
+              </p>
+            </div>
+            <div class="fourth-container-flex-box">
+              <p style="font-size: 12px; color: black; margin: 0">
+                <span style="font-weight: 700">Efecty</span
+                ><span style="font-weight: 400"> : convenio 112901.</span>
+              </p>
+              <p
+                style="
+                  color: black;
+                  font-size: 12px;
+                  margin: 4px 0 0;
+                  font-weight: 400;
+                "
+              >
+                *Válido a nivel nacional.
+              </p>
+            </div>
+          </div>
+        </mj-raw>
+        <mj-spacer height="20px" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section padding="10px" background-color=" rgb(235, 245, 250)">
+      <mj-column>
+        <mj-text
+          align="center"
+          font-size="14px"
+          font-family="Red Hat Display"
+          font-weight="700"
+          color="#000000"
+        >
+          ¿Tienes dudas? Estamos para ayudarte:
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Cards -->
+    <mj-section padding="0px 24px" background-color=" rgb(235, 245, 250)">
+      <mj-column width="100%" padding="8px">
+        <mj-raw>
+          <!-- Card 1 -->
+          <div class="card-container">
+            <div class="foot-container">
+              <div class="foot-container-1">
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/51ce9af3-098d-4779-91a1-85280e14abad/31x29.png"
+                  class="foot-container-1-img"
+                  alt="Logo 1"
+                  width="30"
+                />
+                <div
+                  style="
+                    font-size: 12px;
+                    color: black;
+                    font-weight: 400;
+                    font-family: Red Hat Display;
+                  "
+                >
+                  Escríbenos al Whatsapp<br />
+                  <span
+                    style="
+                      font-weight: 700;
+                      font-family: 'Red Hat Display', Arial, sans-serif;
+                      color: blue;
+                    "
+                    >320 889 9898</span
+                  >
+                </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="foot-container-1">
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/24da3d4c-de2c-448b-977a-b184504f8832/30x30.png"
+                  class="foot-container-1-img"
+                  alt="Logo 2"
+                  width="30"
+                />
+                <div
+                  style="
+                    font-size: 12px;
+                    color: black;
+                    font-weight: 400;
+                    font-family: Red Hat Display;
+                  "
+                >
+                  Llámanos al<br />
+                  <span
+                    style="
+                      font-weight: 700;
+                      font-family: Red Hat Display;
+                      color: blue;
+                    "
+                  >
+                    (+57) 320 889 9898 <br />(+57) 300 914 8000
+                  </span>
+                </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="foot-container-1">
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/408b02b9-23a2-4156-8baf-386a927dacd1/30x29.png"
+                  class="foot-container-1-img"
+                  alt="Logo 3"
+                  width="30"
+                />
+                <div
+                  style="
+                    font-size: 12px;
+                    color: #000;
+                    font-family: Arial, sans-serif;
+                    line-height: 1.4;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 12px;
+                      color: black;
+                      font-weight: 400;
+                      font-family: Red Hat Display;
+                    "
+                  >
+                    Llámanos al<br />
+                    <div
+                      class="responsive-link"
+                      style="
+                        font-family: Red Hat Display;
+                        font-size: 12px;
+                        font-weight: 700;
+                      "
+                    >
+                      <a
+                        href="mailto:info@sistecredito.com"
+                        style="color: blue; text-decoration: none"
+                      >
+                        info@sistecredito.com
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+
+    <!-- Line Break -->
+    <mj-section padding="0 24px" background-color=" rgb(235, 245, 250)">
+      <mj-column>
+        <mj-divider
+          border-color="#cccccc"
+          border-width="1px"
+          padding="24px 0"
+        />
+      </mj-column>
+    </mj-section>
+
+    <!-- Logos at center -->
+    <mj-section padding="5px 0" background-color=" rgb(235, 245, 250)">
+      <mj-column>
+        <mj-raw>
+          <div style="text-align: center">
+            <a href="#" style="display: inline-block; margin: 0 5px">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/f57e88c9-0631-4920-b847-27b2dbdef861/82x81.png"
+                alt="Logo A"
+                style="width: 28px; height: auto; display: block"
+              />
+            </a>
+            <a href="#" style="display: inline-block; margin: 0 4px">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/10931e65-32e1-4b1a-b76b-7263dc44028a/73x81.png"
+                alt="Logo B"
+                width="30"
+                style="width: 25px; display: block margin-top:10px"
+              />
+            </a>
+            <a href="#" style="display: inline-block; margin: 0 5px">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/cf213d8f-4697-47b3-bf16-7aa07d2cafbc/73x73.png"
+                alt="Logo C"
+                width="73"
+                style="width: 25px; height: auto; display: block"
+              />
+            </a>
+          </div>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="10px 0" background-color=" rgb(235, 245, 250)">
+      <mj-column>
+        <mj-raw>
+          <div
+            class="responsive-container"
+            style="
+              display: flex;
+              width: 60%;
+              justify-content: space-between;
+              align-items: center;
+              margin: 0 auto;
+            "
+          >
+            <div
+              class="responsive-link"
+              style="
+                font-family: Red Hat Display;
+                font-size: 10px;
+                color: black;
+              "
+            >
+              <a
+                href="mailto:info@sistecredito.com"
+                style="color: blue; text-decoration: none"
+              >
+                info@sistecredito.com
+              </a>
+            </div>
+
+            <div
+              class="responsive-download"
+              style="
+                font-family: Red Hat Display;
+                font-size: 14px;
+                color: black;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                flex-wrap: wrap;
+              "
+            >
+              <span
+                style="
+                  font-size: 10px;
+                  line-height: 1;
+                  display: flex;
+                  align-items: center;
+                "
+              >
+                Download our app
+              </span>
+
+              <a
+                href="https://play.google.com/store"
+                target="_blank"
+                style="display: flex; align-items: center"
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/ec5a9a81cb919a10/188a7cf3-9293-4237-afc3-b1b2472d1e16/33x33.png"
+                  alt="App Icon 1"
+                  style="width: 15px; height: auto"
+                />
+              </a>
+
+              <a
+                href="https://apps.apple.com"
+                target="_blank"
+                style="display: flex; align-items: center"
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/ec5a9a81cb919a10/a2ba0747-59d6-4c3d-830c-289f1f4decc0/33x33.png"
+                  alt="App Icon 2"
+                  style="width: 15px; height: auto"
+                />
+              </a>
+
+              <a
+                href="https://appgallery.huawei.com"
+                target="_blank"
+                style="display: flex; align-items: center"
+              >
+                <img
+                  src="https://cdn.mcauto-images-production.sendgrid.net/ec5a9a81cb919a10/22d33cf8-6da9-436c-baf8-107404602e4f/33x34.png"
+                  alt="App Icon 3"
+                  style="width: 15px; height: auto"
+                />
+              </a>
+            </div>
+          </div>
+        </mj-raw>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Recordatorio de Pago</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #d3d3d3;
+      }
+      .container {
+        width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+      }
+      .header {
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      .content {
+        padding: 20px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+      .steps {
+        display: flex;
+        justify-content: space-around;
+      }
+      .banner {
+        background-color: #00359b;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .step {
+        text-align: center;
+      }
+      .payment-options {
+        display: flex;
+        justify-content: space-between;
+      }
+      .option {
+        text-align: center;
+      }
+      .contact {
+        text-align: center;
+      }
+      .footer {
+        background-color: #f0f0f0;
+        padding: 10px;
+        text-align: center;
+      }
+      .agreementCardWrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+      }
+      .agreementCard {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .agreementCard p {
+        margin: 10px 0;
+      }
+      .stepsContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .stepCard {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        align-items: center;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+      }
+      .stepCard img {
+        width: 74px;
+        height: 96px;
+        margin-bottom: 15px;
+      }
+      .stepCard p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #333;
+      }
+      .stepCard h3 {
+        margin: 10px 0;
+        font-size: 24px;
+        color: #333;
+      }
+      .channelOptions {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+      .channelItem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+      }
+      .channelItem img {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 8px;
+      }
+      .channelItem p {
+        margin: 0;
+        font-size: 14px;
+        color: #333;
+      }
+      .banner-text {
+        width: 500px;
+        text-align: center;
+        font-family: Red Hat Display;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 28px;
+        line-height: 132%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+      .first {
+        font-family: typography/family/Sistecredito;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 18px;
+        line-height: 130%;
+        letter-spacing: 0%;
+      }
+      .second {
+        font-family: Red Hat Display;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 18px;
+        line-height: 132%;
+        letter-spacing: 0%;
+      }
+      .third {
+        font-family: typography/family/Sistecredito;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 20ppx;
+        line-height: 130%;
+        letter-spacing: 0%;
+      }
+      .forth {
+        font-family: Red Hat Display;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 14px;
+        line-height: 132%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+      .fifth {
+        font-family: typography/family/Sistecredito;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 11px;
+        line-height: 130%;
+        letter-spacing: 0%;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <img
+          src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/15cc6cc6-cd7c-40b2-8265-8e87e618c458/152x35.png"
+          alt="sistecredito logo"
+          style="display: block; margin: 0 auto"
+        />
+      </div>
+      <div class="content">
+        <div class="section">
+          <div class="banner">
+            <div class="banner-text">
+              Remember your outstanding payment, you're still in time to catch
+              up!
+            </div>
+          </div>
+          <p>Hello, [Customer Name],</p>
+
+          <p class="second">
+            <b>You have one or more outstanding payments with Sistecrédito.</b>
+            We advise you to pay as soon as possible so that your debt doesn't
+            continue to increase due to late payment interest and you keep the
+            door open when applying for a new loan from this or other financial
+            institutions.
+          </p>
+          <p class="second">
+            Keep in mind that in the event of a report, according to Law 1266 of
+            2008, from the date of loan payment, the negative data will remain
+            in the Credit Bureau for twice the length of your delinquency,
+            without exceeding 4 years.
+          </p>
+          <p class="third">
+            <b>Quick and easy consultation on how to pay your fees:</b>
+          </p>
+          <div class="stepsContainer">
+            <div class="stepCard">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/6b99086e-575d-42c3-9c66-e430ece8f8ef/39x96.png"
+                alt="Channel Selection Icon"
+              />
+              <p class="forth">Choose the channel you want</p>
+              <div class="channelOptions">
+                <div class="channelItem">
+                  <img
+                    src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/b01c2cb2-ab75-408a-958c-254836eae7e1/38x38.png"
+                    alt="Warehouse Icon"
+                  />
+                  <p class="fifth">Warehouse</p>
+                </div>
+                <div class="channelItem">
+                  <img
+                    src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/3ac01891-8db3-4f19-9bfa-2d51f9a794b8/39x38.png"
+                    alt="Website Icon"
+                  />
+                  <p class="fifth">Website</p>
+                </div>
+                <div class="channelItem">
+                  <img
+                    src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/5e97cbe3-b13f-4f55-93f7-787b9cf212e9/39x38.png"
+                    alt="App Icon"
+                  />
+                  <p class="fifth">App</p>
+                </div>
+              </div>
+            </div>
+            <div class="stepCard">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/bc3220b1-225f-4b3a-b99c-a8bd789dc127/74x96.png"
+                alt="Payment Method Icon"
+              />
+              <p>Selecciona el método de pago</p>
+            </div>
+            <div class="stepCard">
+              <img
+                src="https://cdn.mcauto-images-production.sendgrid.net/046eeb866e4a54ab/aa69e4d1-65d5-4de1-b416-3619290a913c/76x96.png"
+              />
+              <p>Digita tu número y listo</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <p>You can pay for the channel and medium you prefer:</p>
+          <div class="payment-options">
+            <div class="option">
+              <img
+                src="https://via.placeholder.com/50x50?text=Online"
+                alt="Online"
+              />
+              <p>
+                <strong
+                  >Warehouse where you made the purchase. (Cash only)</strong
+                >
+              </p>
+              <p><a href="www.sistecredito.com">www.sistecredito.com</a></p>
+            </div>
+            <div class="option">
+              <img src="https://via.placeholder.com/50x50?text=App" alt="App" />
+              <p><strong>App Sistecredito</strong></p>
+              <p>Negocios</p>
+            </div>
+          </div>
+          <p>Other payment options:</p>
+          <p>
+            You must provide the ID number so that your credits can be
+            identified.
+          </p>
+          <div class="agreementCardWrapper">
+            <div class="agreementCard">
+              <p>Effectiveness: agreement 112901.</p>
+              <p>*Valid nationwide.</p>
+            </div>
+            <div class="agreementCard">
+              <p>Gana: agreement 441.</p>
+              <p>*No approval needed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <p>¿Tienes dudas? Estamos para ayudarte:</p>
+          <p>
+            <a href="https://wa.me/573009999999">+57 300 999 9999</a> |
+            <a href="tel:+571300400000">+57 (1) 300 400 000</a> |
+            <a href="mailto:info@sistecredito.com">info@sistecredito.com</a>
+          </p>
+          <div class="contact">
+            <a href="https://facebook.com"
+              ><img
+                src="https://via.placeholder.com/20x20?text=FB"
+                alt="Facebook"
+            /></a>
+            <a href="https://instagram.com"
+              ><img
+                src="https://via.placeholder.com/20x20?text=IG"
+                alt="Instagram"
+            /></a>
+            <a href="https://twitter.com"
+              ><img
+                src="https://via.placeholder.com/20x20?text=TW"
+                alt="Twitter"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p><a href="www.sistecredito.com">www.sistecredito.com</a></p>
+        <p>Descarga nuestra App | Términos legales</p>
+      </div>
+    </div>
+  </body>
+</html>

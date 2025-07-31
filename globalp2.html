@@ -104,6 +104,74 @@
         padding: 10px;
         border-left: 1px solid #ccc;
       }
+      ul#news-list {
+        list-style: none;
+        padding: 0;
+      }
+      ul#news-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      /* Container styling */
+      .dropdown-container {
+        margin: 20px 0;
+        font-family: "Segoe UI", sans-serif;
+        display: none; /* Initially hidden */
+      }
+
+      /* Label */
+      .dropdown-container label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        display: block;
+        font-size: 16px;
+      }
+
+      /* Stylish select */
+      #state {
+        width: 100%;
+        max-width: 300px;
+        padding: 10px 14px;
+        font-size: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        color: #333;
+        outline: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Hover and focus effects */
+      #state:hover {
+        border-color: #007bff;
+        background-color: #f1f9ff;
+      }
+
+      #state:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+      }
+
+      /* Optional: List styles */
+      #news-list {
+        margin-top: 20px;
+        padding-left: 0;
+        list-style-type: none;
+      }
+
+      #news-list li {
+        background: #f2f2f2;
+        margin-bottom: 10px;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+      }
+
+      #news-list li a {
+        color: blue; /* Inherits the color from the parent element */
+        text-decoration: none; /* Removes underline */
+      }
     </style>
   </head>
   <body>
@@ -127,9 +195,15 @@
             />
             <button id="clear-button" onclick="clearSearch()">✖</button>
           </div>
+
           <button id="search-button" onclick="Trigger()">Search</button>
           <span id="loading-spinner">⏳</span>
-
+          <div class="dropdown-container">
+            <label for="state">Select a State:</label>
+            <select name="State" id="state">
+              <!-- options will be populated dynamically -->
+            </select>
+          </div>
           <ul id="news-list"></ul>
         </div>
       </div>
@@ -1251,19 +1325,91 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-mapael@2.2.0/js/maps/usa_states.js"></script>
 
     <script>
+      const feedlist = [];
       const apiKey = "rm9pbggtpbdaqdscdbfoig5ro0busxffatbr5vlq"; // Replace with your real key
       function searchNews(keyword) {
         const matchedStates = [];
+        const feedlist = [];
+        let states = [];
         Object.keys(articlesByFeed).forEach((feedKey) => {
           const articles = articlesByFeed[feedKey] || [];
           articles.forEach((article) => {
             if (article.title.toLowerCase().includes(keyword.toLowerCase())) {
+              feedlist.push({
+                title: article.title,
+                link: article.link,
+                state: feedKey,
+              });
               matchedStates.push(feedKey);
             }
           });
         });
+        console.log("Matched States:", keyword);
+
+        const stateSelect = document.getElementById("state");
+
+        stateSelect.innerHTML = "";
+
+        const defaultOption = document.createElement("option");
+        defaultOption.textContent = "Select a state";
+        defaultOption.value = "all";
+        stateSelect.appendChild(defaultOption);
         flashStates(matchedStates);
+        Object.values(matchedStates).forEach((stateName) => {
+          states.push(stateName.replace(/[^a-zA-Z\s]/g, ""));
+        });
+        states = [...new Set(states)];
+        Object.values(states).forEach((stateName) => {
+          const option = document.createElement("option");
+          option.value = stateName;
+          option.textContent = stateName;
+          stateSelect.appendChild(option);
+        });
+        const ul = document.getElementById("news-list");
+
+        document.querySelector(".dropdown-container").style.display =
+          feedlist.length !== 0 ? "block" : "none";
+
+        document.getElementById("news-list").style.display =
+          feedlist.length !== 0 ? "block" : "none";
+
+        // Clear previous content
+        ul.innerHTML = "";
+
+        // Display results
+        feedlist.forEach(({ title, link, state }) => {
+          const li = document.createElement("li");
+          //li.textContent = `${title} -- ${state}`;
+          li.innerHTML = `<a href="${link}" target="_blank">${title} -- ${state}</a>`;
+          ul.appendChild(li);
+        });
+        document
+          .getElementById("state")
+          .addEventListener("change", function () {
+            const selectedState = this.value;
+            const displayState = [];
+            if (selectedState !== "all") {
+              console.log("Selected State:", selectedState);
+              feedlist.forEach((element) => {
+                if (element.state.includes(selectedState)) {
+                  displayState.push(element);
+                }
+              });
+              const ul = document.getElementById("news-list");
+              ul.innerHTML = "";
+
+              displayState.forEach((article) => {
+                const li = document.createElement("li");
+                //li.textContent = `${article.title} -- ${article.state}`;
+                li.innerHTML = `<a href="${article.link}" target="_blank">${article.title} -- ${article.state}</a>`;
+                ul.appendChild(li);
+              });
+            } else {
+              searchNews(keyword);
+            }
+          });
       }
+
       const stateToId = {
         Alabama: "AL",
         Alaska: "AK",
@@ -1293,19 +1439,19 @@
         Montana: "MT",
         Nebraska: "NE",
         Nevada: "NV",
-        "New Hampshire": "NH",
-        "New Jersey": "NJ",
-        "New Mexico": "NM",
-        "New York": "NY",
-        "North Carolina": "NC",
-        "North Dakota": "ND",
+        NewHampshire: "NH",
+        NewJersey: "NJ",
+        NewMexico: "NM",
+        NewYork: "NY",
+        NorthCarolina: "NC",
+        NorthDakota: "ND",
         Ohio: "OH",
         Oklahoma: "OK",
         Oregon: "OR",
         Pennsylvania: "PA",
-        "Rhode Island": "RI",
-        "South Carolina": "SC",
-        "South Dakota": "SD",
+        RhodeIsland: "RI",
+        SouthCarolina: "SC",
+        SouthDakota: "SD",
         Tennessee: "TN",
         Texas: "TX",
         Utah: "UT",
@@ -1342,6 +1488,8 @@
       function clearSearch() {
         document.getElementById("search-bar").value = "";
         document.getElementById("search-bar").focus();
+        document.getElementById("news-list").style.display = "none";
+        document.querySelector(".dropdown-container").style.display = "none";
         stopFlashing();
       }
 
@@ -1852,6 +2000,9 @@
         .addEventListener("input", function (e) {
           if (e.target.value.trim() === "") {
             stopFlashing();
+            document.getElementById("news-list").style.display = "none";
+            document.querySelector(".dropdown-container").style.display =
+              "none";
           }
         });
       const getAreaIdFromName = (stateAbbr) => {
@@ -1863,6 +2014,8 @@
         stopFlashing(); // Stop any previous flashing before starting new
 
         const areaIds = stateList.map((state) => getAreaIdFromName(state));
+        console.log(stateList);
+        console.log(areaIds);
         let isHighlighted = false;
 
         flashIntervalId = setInterval(() => {
