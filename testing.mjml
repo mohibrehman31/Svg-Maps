@@ -51,9 +51,9 @@
       .fourth-container-flex-container { display: flex; gap: 10px; flex-wrap:
       nowrap; padding: 0 30px;width: 100%; box-sizing: border-box; }
       .fourth-container-flex-box { flex: 1 1 0; min-width: 0; box-sizing:
-      border-box; padding: 10px; background-color: #f0f0f0; font-size: 14px;
-      border-radius: 4px; } .fourth-container-flex-box:nth-child(2) {
-      background-color: #f0f0f0; } @media only screen and (max-width: 600px) {
+      border-box; padding: 10px; border: 1px solid #C9C9C9; font-size: 14px;
+      border-radius: 4px; } .fourth-container-flex-box:nth-child(2) { border:
+      1px solid #C9C9C9; } @media only screen and (max-width: 600px) {
       .fourth-container-flex-box { font-size: 12px; } }
     </mj-style>
     <mj-style>
@@ -310,9 +310,8 @@
               />
               <div class="step-content">
                 <p class="step-title">
-                  Selecciona el botón<br /><span class="step-1-sub"
-                    >Pago rápido</span
-                  >
+                  Selecciona el botón Pago rápido
+                  <br />
                 </p>
               </div>
             </div>
@@ -324,10 +323,7 @@
                 style="padding-right: 10px"
               />
               <div class="step-content">
-                <p class="step-title">
-                  Digita tu <span class="step-1-sub">tipo y número</span
-                  ><br />de documento
-                </p>
+                <p class="step-title">Digita tu tipo y número de documento</p>
               </div>
             </div>
           </div>
@@ -476,8 +472,8 @@
                 style="object-fit: contain"
               />
               <span class="second-container-text">
-                <span style="font-weight: 700"> App Sistecredito</span>
-                <span style="font-weight: 400">paga con :</span>
+                <span style="font-weight: 700"> App Sistecrédito </span>
+                <span style="font-weight: 400">paga con:</span>
               </span>
             </div>
             <div class="second-container-flex-items">
@@ -625,8 +621,8 @@
             </div>
             <div class="fourth-container-flex-box">
               <p style="font-size: 12px; color: black; margin: 0">
-                <span style="font-weight: 700">Efecty</span
-                ><span style="font-weight: 400"> : convenio 112901.</span>
+                <span style="font-weight: 700">Gana : </span
+                ><span style="font-weight: 400"> convenio 441. </span>
               </p>
               <p
                 style="
@@ -636,7 +632,7 @@
                   font-weight: 400;
                 "
               >
-                *Válido a nivel nacional.
+                *Válido solo para Antioquia.
               </p>
             </div>
           </div>
@@ -905,6 +901,52 @@
             </div>
           </div>
         </mj-raw>
+      </mj-column>
+    </mj-section>
+    <mj-section background-color=" rgb(235, 245, 250)" padding="20px 0">
+      <mj-column width="100%" vertical-align="middle">
+        <mj-text
+          align="center"
+          font-size="10px"
+          color="#555555"
+          padding="0px"
+          font-family="Red Hat Display"
+        >
+          <div style="text-align: center">
+            <a
+              href="https://example.com/pqrs"
+              style="
+                display: inline-block;
+                padding: 0 4px;
+                color: #555555;
+                text-decoration: none;
+              "
+              >PQRS</a
+            >
+            <span style="display: inline-block; padding: 0 4px">|</span>
+            <a
+              href="https://example.com/terminos"
+              style="
+                display: inline-block;
+                padding: 0 4px;
+                color: #555555;
+                text-decoration: none;
+              "
+              >Términos legales</a
+            >
+            <span style="display: inline-block; padding: 0 4px">|</span>
+            <a
+              href="https://example.com/anular"
+              style="
+                display: inline-block;
+                padding: 0 4px;
+                color: #555555;
+                text-decoration: none;
+              "
+              >Anular suscripción</a
+            >
+          </div>
+        </mj-text>
       </mj-column>
     </mj-section>
   </mj-body>
